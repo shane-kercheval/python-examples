@@ -11,14 +11,14 @@ parameter_names:
 - model__max_features
 - model__n_estimators
 - prep__non_numeric__encoder__transformer
-- prep__numeric__impute__transformer
-- prep__numeric__scaling__transformer
+- prep__numeric__imputer__transformer
+- prep__numeric__scaler__transformer
 parameter_names_mapping:
   model__max_features: max_features
   model__n_estimators: n_estimators
   prep__non_numeric__encoder__transformer: encoder
-  prep__numeric__impute__transformer: imputer
-  prep__numeric__scaling__transformer: scaler
+  prep__numeric__imputer__transformer: imputer
+  prep__numeric__scaler__transformer: scaler
 test_score_rankings:
   ROC/AUC:
   - 25
@@ -768,329 +768,329 @@ parameter_iterations:
 - model__max_features: 2
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 2
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 2
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 2
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 2
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 2
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 2
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 2
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 2
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 2
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 2
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 2
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 10
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 10
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 10
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 10
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 10
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 10
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 10
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 10
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 10
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 10
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 10
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 10
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: auto
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: auto
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: auto
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: auto
   model__n_estimators: 50
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: auto
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: auto
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: auto
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: auto
   model__n_estimators: 100
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: auto
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: auto
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: auto
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: MinMaxScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: auto
   model__n_estimators: 500
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__impute__transformer: SimpleImputer()
-  prep__numeric__scaling__transformer: StandardScaler()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
 timings:
   fit time averages:
-  - 0.05060410499572754
-  - 0.046805191040039065
-  - 0.055796694755554196
-  - 0.05633056163787842
-  - 0.08621952533721924
-  - 0.08654944896697998
-  - 0.09779698848724365
-  - 0.09856362342834472
-  - 0.40555872917175295
-  - 0.41511409282684325
-  - 0.4372508764266968
-  - 0.43065991401672366
-  - 0.057154512405395506
-  - 0.05772078037261963
-  - 0.07629289627075195
-  - 0.0759122610092163
-  - 0.10851039886474609
-  - 0.11079082489013672
-  - 0.142344331741333
-  - 0.1442617416381836
-  - 0.5188214302062988
-  - 0.5165138959884643
-  - 0.6312047004699707
-  - 0.634766411781311
-  - 0.053708004951477054
-  - 0.062426066398620604
-  - 0.06315071582794189
-  - 0.06418383121490479
-  - 0.10151956081390381
-  - 0.10186948776245117
-  - 0.10891885757446289
-  - 0.11558127403259277
-  - 0.48012855052948
-  - 0.5130092382431031
-  - 0.5132418394088745
-  - 0.49406654834747316
+  - 0.14046199321746827
+  - 0.12743396759033204
+  - 0.1282221794128418
+  - 0.1212268590927124
+  - 0.25952916145324706
+  - 0.1846526861190796
+  - 0.2111292600631714
+  - 0.3939445734024048
+  - 1.7284720182418822
+  - 1.625112819671631
+  - 1.6791351556777954
+  - 1.8769261837005615
+  - 0.25920825004577636
+  - 0.2647239208221436
+  - 0.33946106433868406
+  - 0.36135995388031006
+  - 0.4549973726272583
+  - 0.3626047372817993
+  - 0.45696957111358644
+  - 0.4817910671234131
+  - 1.6724319458007812
+  - 1.0939471960067748
+  - 1.2861220359802246
+  - 1.2672276973724366
+  - 0.11389603614807128
+  - 0.11791267395019531
+  - 0.1369319438934326
+  - 0.13332300186157225
+  - 0.21684937477111815
+  - 0.2140448808670044
+  - 0.22742326259613038
+  - 0.22854971885681152
+  - 0.9887770652770996
+  - 1.0252258777618408
+  - 1.2960157155990601
+  - 1.645078468322754
   fit time standard deviations:
-  - 0.009079875079178411
-  - 0.0002793757291498686
-  - 0.0002575126182777701
-  - 0.0005340812695962132
-  - 0.0002388022780409562
-  - 0.0006447605615203253
-  - 0.002185149744005229
-  - 0.002204278803406063
-  - 0.005382116489110883
-  - 0.014357559693625944
-  - 0.011173648826667808
-  - 0.004159910727749232
-  - 0.0006318000684829001
-  - 0.0010087766265446832
-  - 0.0008839602248671635
-  - 0.000818314669784672
-  - 0.00213609572926561
-  - 0.004306801265581473
-  - 0.009815751194520227
-  - 0.008744693182796201
-  - 0.0071536854154837124
-  - 0.00792723087796816
-  - 0.01580490589268373
-  - 0.011989473274291599
-  - 0.00018528541687778111
-  - 0.018164384137242733
-  - 0.0018296867840645295
-  - 0.006571832703517358
-  - 0.0008815951701436712
-  - 0.001489333482063551
-  - 0.0005399279466567691
-  - 0.016994814360632934
-  - 0.008950207976116724
-  - 0.027273921461554385
-  - 0.015102045639936014
-  - 0.005025282217512839
+  - 0.014290171428972263
+  - 0.02280931880129315
+  - 0.014012158211535593
+  - 0.018324188865776095
+  - 0.041280277296035096
+  - 0.021264949316838682
+  - 0.017165430199444665
+  - 0.0696099301870433
+  - 0.0871714682783584
+  - 0.052206205592241706
+  - 0.06465463546578921
+  - 0.14758431726283128
+  - 0.04208279204422045
+  - 0.05075626267592102
+  - 0.04655266198812349
+  - 0.030427434138050467
+  - 0.043354277700834026
+  - 0.012796326526778368
+  - 0.01941942462702825
+  - 0.02405408156018906
+  - 0.28651734852439464
+  - 0.02293257595758414
+  - 0.02786752077017178
+  - 0.021015906354141575
+  - 0.009186841333479502
+  - 0.010681641530325713
+  - 0.012784565500467988
+  - 0.010173856027851643
+  - 0.013190731651642206
+  - 0.009696138180386286
+  - 0.016661146255433367
+  - 0.01386956949960823
+  - 0.03606388421018456
+  - 0.1498618581493298
+  - 0.28835701340518427
+  - 0.06465459956896444
   score time averages:
-  - 0.013664555549621583
-  - 0.013120388984680176
-  - 0.02304551601409912
-  - 0.023085641860961913
-  - 0.01883091926574707
-  - 0.018848633766174315
-  - 0.028841638565063478
-  - 0.02912271022796631
-  - 0.06548147201538086
-  - 0.06739597320556641
-  - 0.07758278846740722
-  - 0.07537167072296143
-  - 0.013136982917785645
-  - 0.013536405563354493
-  - 0.02414107322692871
-  - 0.023201394081115722
-  - 0.018737530708312987
-  - 0.01980276107788086
-  - 0.029790639877319336
-  - 0.029191756248474122
-  - 0.06415584087371826
-  - 0.06306772232055664
-  - 0.07346713542938232
-  - 0.07306833267211914
-  - 0.012881159782409668
-  - 0.013968753814697265
-  - 0.023880553245544434
-  - 0.023381423950195313
-  - 0.018874597549438477
-  - 0.01884160041809082
-  - 0.028861808776855468
-  - 0.029456090927124024
-  - 0.06415889263153077
-  - 0.07402303218841552
-  - 0.07794890403747559
-  - 0.07538127899169922
+  - 0.04066035747528076
+  - 0.029510641098022462
+  - 0.0595442533493042
+  - 0.06620368957519532
+  - 0.07884438037872314
+  - 0.039478206634521486
+  - 0.09814281463623047
+  - 0.11328933238983155
+  - 0.26550610065460206
+  - 0.2730739116668701
+  - 0.3325508117675781
+  - 0.3340097427368164
+  - 0.07799997329711914
+  - 0.06647863388061523
+  - 0.10271811485290527
+  - 0.11941602230072021
+  - 0.0761272668838501
+  - 0.07355232238769531
+  - 0.10500233173370362
+  - 0.10871682167053223
+  - 0.15318739414215088
+  - 0.13836193084716797
+  - 0.1544727087020874
+  - 0.1637200117111206
+  - 0.0270798921585083
+  - 0.02757904529571533
+  - 0.05546560287475586
+  - 0.05241103172302246
+  - 0.04245617389678955
+  - 0.04041509628295899
+  - 0.06932339668273926
+  - 0.06524159908294677
+  - 0.13169512748718262
+  - 0.15278000831604005
+  - 0.2109833002090454
+  - 0.24091727733612062
   score time standard deviations:
-  - 0.0009092577890924797
-  - 0.00013413970204405212
-  - 0.00012285501173710313
-  - 0.00014911197334370807
-  - 8.793788674417446e-05
-  - 0.00012769893400111395
-  - 0.00047561924130505123
-  - 0.0007307133131030432
-  - 0.00015856623728015487
-  - 0.002682851716076395
-  - 0.0031609632555503436
-  - 0.0007239861304648162
-  - 0.00046105852155775876
-  - 0.0008178315046322531
-  - 0.002376354856311137
-  - 0.0006365530142338028
-  - 0.0006341261527769777
-  - 0.002590478399142536
-  - 0.0011775859571039242
-  - 0.0005009751970857495
-  - 0.0015361766027228018
-  - 0.0008487233526749264
-  - 0.001036848126932868
-  - 0.0010811538670698968
-  - 0.0001175157050106396
-  - 0.0013401778804925104
-  - 0.0007396299540715741
-  - 0.00033227308242054474
-  - 0.0003721816472678379
-  - 0.00030663807156980865
-  - 0.0001186259684613515
-  - 0.0012333958126334763
-  - 0.000907285645930331
-  - 0.014221372617465224
-  - 0.0028344337204259684
-  - 0.0004476664975978503
+  - 0.014492089791523012
+  - 0.006921868534443475
+  - 0.009594960622484204
+  - 0.02148893258711924
+  - 0.05385196438934896
+  - 0.004437653689221906
+  - 0.06904088405722378
+  - 0.018247822328693698
+  - 0.025222827329365975
+  - 0.04753963659902884
+  - 0.029205269611071016
+  - 0.03640621767707918
+  - 0.03328763142578101
+  - 0.015217035233481467
+  - 0.04393410596094884
+  - 0.027708271215835464
+  - 0.020343841238797306
+  - 0.016702671712266585
+  - 0.01114024470203702
+  - 0.020486008166342693
+  - 0.018508288647603656
+  - 0.013477374900420197
+  - 0.005329501925638383
+  - 0.008123607694819861
+  - 0.005070334078938588
+  - 0.008757113903087442
+  - 0.009819890704114681
+  - 0.004999209458424378
+  - 0.007118976070537453
+  - 0.007973626824966178
+  - 0.007726613282954208
+  - 0.010514859443226096
+  - 0.01205482144692746
+  - 0.06945008526583844
+  - 0.05335076411705367
+  - 0.026236768786068145
