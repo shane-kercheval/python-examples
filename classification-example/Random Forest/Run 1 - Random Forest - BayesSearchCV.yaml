@@ -7,384 +7,546 @@ score_names:
 parameter_names:
 - model__max_features
 - model__n_estimators
+- pca__transformer
 - prep__non_numeric__encoder__transformer
 - prep__numeric__imputer__transformer
 - prep__numeric__scaler__transformer
 parameter_names_mapping:
   model__max_features: max_features
   model__n_estimators: n_estimators
+  pca__transformer: pca
   prep__non_numeric__encoder__transformer: encoder
   prep__numeric__imputer__transformer: imputer
   prep__numeric__scaler__transformer: scaler
 test_score_rankings:
   roc_auc:
-  - 24
+  - 31
+  - 34
   - 23
-  - 15
-  - 30
-  - 26
+  - 33
+  - 36
   - 21
-  - 22
-  - 27
-  - 17
-  - 4
-  - 12
-  - 13
-  - 16
-  - 7
-  - 5
-  - 2
-  - 20
-  - 14
-  - 8
-  - 9
-  - 11
-  - 28
-  - 3
-  - 19
-  - 1
-  - 25
+  - 39
+  - 38
+  - 37
+  - 32
   - 29
+  - 25
+  - 35
+  - 4
+  - 16
+  - 28
+  - 26
+  - 22
+  - 15
+  - 24
+  - 3
+  - 40
+  - 1
+  - 7
+  - 17
   - 6
-  - 10
+  - 8
+  - 2
+  - 11
+  - 27
+  - 12
+  - 14
+  - 9
   - 18
+  - 10
+  - 30
+  - 13
+  - 5
+  - 19
+  - 20
 test_score_averages:
   roc_auc:
-  - 0.7472506058238839
-  - 0.747854441741949
-  - 0.7568420702444666
-  - 0.7363257997380999
-  - 0.7460134170073782
-  - 0.7524428419431034
-  - 0.749178201525227
-  - 0.7442381562734853
-  - 0.7551807089610372
-  - 0.7697607470952884
-  - 0.763042494362385
-  - 0.7624670125378674
-  - 0.7555620077352847
-  - 0.7665470170337733
-  - 0.768534751434472
-  - 0.7703936984977671
-  - 0.7527627803816144
-  - 0.7569782227476427
-  - 0.7661437946939851
-  - 0.7657056244340296
-  - 0.7632594545815239
-  - 0.7425998019464628
-  - 0.7698158816016756
-  - 0.7533959350599184
-  - 0.772849879997989
-  - 0.7461457567559158
-  - 0.7420354129511295
-  - 0.7679777190976289
-  - 0.7653446733963344
-  - 0.7545925106593722
+  - 0.6957743243474857
+  - 0.6845564589365618
+  - 0.7493192481974026
+  - 0.6901142016022258
+  - 0.6799490814765108
+  - 0.7532732204732703
+  - 0.6647527082066501
+  - 0.6678440225774975
+  - 0.6786581442053163
+  - 0.6907721957623247
+  - 0.7364111674300615
+  - 0.7430855960107922
+  - 0.6811955099199941
+  - 0.7662498579674558
+  - 0.7603146912070862
+  - 0.7364763664986119
+  - 0.7430039581819665
+  - 0.7528534575052535
+  - 0.7603195480129259
+  - 0.7474944801479658
+  - 0.7668681807048608
+  - 0.597509380721904
+  - 0.7722669682347091
+  - 0.7655648825968957
+  - 0.7602606117930046
+  - 0.7657911445338794
+  - 0.7653152718685433
+  - 0.7686650396314114
+  - 0.7620222045897984
+  - 0.7427358467884544
+  - 0.7613900148754975
+  - 0.7607077653728276
+  - 0.764232423299223
+  - 0.7600958596552421
+  - 0.7623221487037504
+  - 0.7328567633702667
+  - 0.7613685242257581
+  - 0.7658884384760556
+  - 0.7582257591386211
+  - 0.7563461200699669
 test_score_standard_deviations:
   roc_auc:
-  - 0.027131224137105826
-  - 0.03172031166669169
-  - 0.036222405095552634
-  - 0.03989079560291417
-  - 0.03762465417679932
-  - 0.05194851352454498
-  - 0.026793173352842262
-  - 0.03710794786811787
-  - 0.02147896733211707
-  - 0.02392506879017502
-  - 0.038082129823145454
-  - 0.029733392748675085
-  - 0.04581836849997589
-  - 0.022784290959620198
-  - 0.03290388910230208
-  - 0.04099569964231203
-  - 0.027669531853167565
-  - 0.025742527567973274
-  - 0.036129144694714184
-  - 0.03022151667315547
-  - 0.02662743884820447
-  - 0.040573091873392635
-  - 0.02979844052365329
-  - 0.03798310327414949
-  - 0.03865250372786903
-  - 0.030225529405903426
-  - 0.03075964400442374
-  - 0.032486642178720285
-  - 0.042467005261286696
-  - 0.038485041822280366
+  - 0.05039279929174447
+  - 0.030045335905410822
+  - 0.04061640692678599
+  - 0.03623862112607133
+  - 0.04611244029355861
+  - 0.025831639161534126
+  - 0.030932207954244634
+  - 0.04588337103706993
+  - 0.042832569771187316
+  - 0.04616184153208805
+  - 0.026441294366369956
+  - 0.04443549373753374
+  - 0.023192754860042655
+  - 0.03487841609711316
+  - 0.02274938549682432
+  - 0.025175391494639914
+  - 0.038264984514637335
+  - 0.04334867055836242
+  - 0.0432976168078274
+  - 0.04937395461458616
+  - 0.046955635625592705
+  - 0.04538177601996455
+  - 0.03375383869434391
+  - 0.03396468203453496
+  - 0.024124984735245873
+  - 0.019277683972505212
+  - 0.056657362966810745
+  - 0.02932920030830828
+  - 0.04234214722871207
+  - 0.03813963655004755
+  - 0.03953546496826946
+  - 0.03807956895752971
+  - 0.03297425442161117
+  - 0.045284994275653245
+  - 0.03637101191261699
+  - 0.027164531354365622
+  - 0.02222512370306692
+  - 0.02575354451756207
+  - 0.03983770415868329
+  - 0.04628543738062723
 parameter_iterations:
 - model__max_features: 0.4119018796762476
   model__n_estimators: 3652
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__max_features: 0.8306405884422187
-  model__n_estimators: 4422
+  pca__transformer: KernelPCA(n_components=5)
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.8306405884422187
+  model__n_estimators: 4422
+  pca__transformer: KernelPCA(kernel='rbf', n_components=5)
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 0.4459358620551288
   model__n_estimators: 4598
+  pca__transformer: None
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 0.8061480685902161
   model__n_estimators: 901
+  pca__transformer: KernelPCA(kernel='sigmoid', n_components=5)
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 0.7935623727750296
   model__n_estimators: 2218
+  pca__transformer: KernelPCA(kernel='sigmoid', n_components=5)
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 0.7293474576258571
   model__n_estimators: 4700
+  pca__transformer: None
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 0.61473777133227
   model__n_estimators: 3888
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  pca__transformer: KernelPCA(kernel='rbf', n_components=5)
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 0.5425350063365063
   model__n_estimators: 4604
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  pca__transformer: KernelPCA(kernel='rbf', n_components=5)
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 0.9463684265837298
   model__n_estimators: 3518
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  pca__transformer: KernelPCA(n_components=5)
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 0.013557701109648362
   model__n_estimators: 4098
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__max_features: 0.01
-  model__n_estimators: 127
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__max_features: 0.02996066035796361
-  model__n_estimators: 2317
+  pca__transformer: KernelPCA(kernel='sigmoid', n_components=5)
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__max_features: 0.01
-  model__n_estimators: 4599
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__max_features: 0.039186205991246705
-  model__n_estimators: 1597
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__max_features: 0.07645297359042208
-  model__n_estimators: 3259
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__max_features: 0.08005728226887988
-  model__n_estimators: 5000
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
-- model__max_features: 0.19402261481618832
-  model__n_estimators: 4967
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__max_features: 0.14894297139757146
+- model__max_features: 0.99
   model__n_estimators: 50
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__max_features: 0.04550427764329165
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__max_features: 0.6120494564079458
+  model__n_estimators: 50
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__max_features: 0.7466644017572699
   model__n_estimators: 5000
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  pca__transformer: KernelPCA(kernel='rbf', n_components=5)
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
-- model__max_features: 0.07017428041652975
-  model__n_estimators: 82
+- model__max_features: 0.01
+  model__n_estimators: 5000
+  pca__transformer: None
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__max_features: 0.06373020466434066
+- model__max_features: 0.01
   model__n_estimators: 5000
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.01
+  model__n_estimators: 50
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__max_features: 0.99
+  model__n_estimators: 5000
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__max_features: 0.01
+  model__n_estimators: 5000
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__max_features: 0.01
+  model__n_estimators: 5000
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.4112160248624697
+  model__n_estimators: 5000
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__max_features: 0.01
+  model__n_estimators: 5000
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.04917087833325025
+  model__n_estimators: 84
+  pca__transformer: KernelPCA(n_components=5)
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__max_features: 0.01
+  model__n_estimators: 2757
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.01
+  model__n_estimators: 3040
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__max_features: 0.01
+  model__n_estimators: 2265
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.01
+  model__n_estimators: 3779
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.01
+  model__n_estimators: 3417
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.01
+  model__n_estimators: 3383
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.01
+  model__n_estimators: 4021
+  pca__transformer: None
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 0.99
-  model__n_estimators: 206
+  model__n_estimators: 2477
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.01
+  model__n_estimators: 4999
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.01
+  model__n_estimators: 3231
+  pca__transformer: None
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 0.01
-  model__n_estimators: 3061
+  model__n_estimators: 3095
+  pca__transformer: None
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
-- model__max_features: 0.022028642861242863
-  model__n_estimators: 159
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
 - model__max_features: 0.01
-  model__n_estimators: 3180
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__max_features: 0.3701884590657441
-  model__n_estimators: 81
+  model__n_estimators: 3318
+  pca__transformer: None
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
-- model__max_features: 0.958232943775359
-  model__n_estimators: 4947
+- model__max_features: 0.01
+  model__n_estimators: 3324
+  pca__transformer: None
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__max_features: 0.9895268038695795
+  model__n_estimators: 5000
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 0.01
   model__n_estimators: 5000
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__max_features: 0.01
-  model__n_estimators: 5000
+  model__n_estimators: 4118
+  pca__transformer: None
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
-- model__max_features: 0.011005390806159634
-  model__n_estimators: 59
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+- model__max_features: 0.01
+  model__n_estimators: 3612
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__max_features: 0.01
+  model__n_estimators: 4248
+  pca__transformer: None
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
 timings:
   fit time averages:
-  - 6.680740785598755
-  - 13.905239248275757
-  - 11.962848711013795
-  - 2.122320318222046
-  - 5.511677765846253
-  - 13.889899134635925
-  - 10.424391531944275
-  - 11.002528047561645
-  - 8.597158098220826
-  - 5.084470415115357
-  - 0.18740952014923096
-  - 3.1717235803604127
-  - 5.836092281341553
-  - 2.483251619338989
-  - 4.413854718208313
-  - 6.917257571220398
-  - 18.96351294517517
-  - 0.14294979572296143
-  - 8.21781108379364
-  - 0.1283327341079712
-  - 6.252271127700806
-  - 0.7070760011672974
-  - 3.948755073547363
-  - 0.22272109985351562
-  - 3.899840545654297
-  - 0.16701045036315917
-  - 12.19366762638092
-  - 6.92744288444519
-  - 6.8195494413375854
-  - 0.1128929853439331
+  - 6.500333189964294
+  - 10.52908148765564
+  - 10.288699460029601
+  - 2.147686982154846
+  - 4.3547216892242435
+  - 12.574377274513244
+  - 7.522773814201355
+  - 7.885668396949768
+  - 7.934376239776611
+  - 5.803442573547363
+  - 0.18338303565979003
+  - 0.15838391780853273
+  - 9.495493698120118
+  - 6.283498859405517
+  - 6.255193829536438
+  - 0.09735276699066162
+  - 12.304951405525207
+  - 6.240263867378235
+  - 6.273083686828613
+  - 8.488264894485473
+  - 6.21465835571289
+  - 0.18494527339935302
+  - 3.607660508155823
+  - 3.9411666870117186
+  - 2.888074541091919
+  - 4.763930940628052
+  - 4.213804483413696
+  - 4.518852996826172
+  - 5.084083700180054
+  - 8.154194378852845
+  - 6.258052659034729
+  - 4.042764472961426
+  - 3.8837010622024537
+  - 4.1329972505569454
+  - 4.174292588233948
+  - 17.629339981079102
+  - 6.465592241287231
+  - 5.142501974105835
+  - 4.746722745895386
+  - 5.919301152229309
   fit time standard deviations:
-  - 1.1954504084300241
-  - 2.1402952624475633
-  - 2.4537600638035677
-  - 0.3289522075710728
-  - 0.9287407254748704
-  - 2.3728274950152115
-  - 1.7337055436463167
-  - 1.5197742675538652
-  - 1.224008081037249
-  - 0.8780507312588355
-  - 0.013697674264829148
-  - 0.604059604134516
-  - 0.9820809913809773
-  - 0.48237415061343225
-  - 0.7926101428189142
-  - 0.3899437905668304
-  - 3.8439131857819637
-  - 0.055084278186358346
-  - 2.0280386819138534
-  - 0.012476324461026254
-  - 1.0642344990902821
-  - 0.07920654469194922
-  - 0.6986709967171457
-  - 0.034242805821201344
-  - 0.6421268113113052
-  - 0.020081982231949968
-  - 1.6963458449348883
-  - 1.3096658863188166
-  - 0.8606049958711038
-  - 0.021502211341706344
+  - 1.08288283438783
+  - 1.894879513264949
+  - 1.744807208633986
+  - 0.3321318714922213
+  - 0.6711281236260985
+  - 1.7894625632718848
+  - 1.1936419296191672
+  - 1.135307410064019
+  - 1.293266706559732
+  - 0.9405660835386191
+  - 0.014221113598153043
+  - 0.021280672184921735
+  - 1.3791140488183395
+  - 1.0839087865965207
+  - 1.0389207132378282
+  - 0.009730862682811786
+  - 1.816573321338406
+  - 0.9986178252328647
+  - 1.0931889507034673
+  - 1.2751193000033114
+  - 1.038083811275616
+  - 0.01765354543329759
+  - 0.6431748117094406
+  - 0.731449654466058
+  - 0.5129732171965387
+  - 0.8551852026119499
+  - 0.731395845736352
+  - 0.8410880297632533
+  - 0.8859147810165598
+  - 1.163333815195884
+  - 1.035229179332752
+  - 0.703068593944178
+  - 0.6662496385008198
+  - 0.7192756576937632
+  - 0.7036144521212537
+  - 2.7077519915976556
+  - 1.1201910796262817
+  - 0.870638254786521
+  - 0.8686021726853067
+  - 0.9501751042586388
   score time averages:
-  - 0.5042778015136719
-  - 0.46286113262176515
-  - 0.537674856185913
-  - 0.09724671840667724
-  - 0.30645697116851806
-  - 0.4755167722702026
-  - 0.3871706485748291
-  - 0.4229229211807251
-  - 0.3431987285614014
-  - 0.38557021617889403
-  - 0.03861324787139893
-  - 0.2498629093170166
-  - 0.5186680078506469
-  - 0.25429112911224366
-  - 0.3478176832199097
-  - 0.682121467590332
-  - 0.9579987525939941
-  - 0.02403407096862793
-  - 0.48680524826049804
-  - 0.024381065368652345
-  - 0.5342495203018188
-  - 0.03146343231201172
-  - 0.3053377389907837
-  - 0.029347920417785646
-  - 0.305551552772522
-  - 0.015164732933044434
-  - 0.43825905323028563
-  - 0.5383442878723145
-  - 0.5750949144363403
-  - 0.027953457832336426
+  - 0.8007184982299804
+  - 0.410581636428833
+  - 0.4898630857467651
+  - 0.10790872573852539
+  - 0.20619595050811768
+  - 0.3858379125595093
+  - 0.3459993600845337
+  - 0.493572735786438
+  - 0.3221109390258789
+  - 0.39573466777801514
+  - 0.014637470245361328
+  - 0.016388583183288574
+  - 0.47070600986480715
+  - 0.4758129596710205
+  - 0.5834377765655517
+  - 0.02062222957611084
+  - 0.4576470375061035
+  - 0.5038476467132569
+  - 0.47851200103759767
+  - 0.4453667163848877
+  - 0.5435287952423096
+  - 0.020587873458862305
+  - 0.2924782752990723
+  - 0.3017692804336548
+  - 0.22055451869964598
+  - 0.35860769748687743
+  - 0.31626937389373777
+  - 0.34158034324645997
+  - 0.38290748596191404
+  - 0.20734825134277343
+  - 0.4695594310760498
+  - 0.30755767822265623
+  - 0.29116044044494627
+  - 0.3017547369003296
+  - 0.31567978858947754
+  - 0.47416641712188723
+  - 0.5552670240402222
+  - 0.4042295694351196
+  - 0.350178861618042
+  - 0.6045100688934326
   score time standard deviations:
-  - 0.14708464739246296
-  - 0.08245965130052686
-  - 0.15714260996679866
-  - 0.01992413208997316
-  - 0.08339877797426547
-  - 0.10462533199764833
-  - 0.08998048889470213
-  - 0.07797989982378549
-  - 0.06746856094872698
-  - 0.06198686591978579
-  - 0.011633620234799285
-  - 0.04128929704780944
-  - 0.09972388406872995
-  - 0.07688216585173323
-  - 0.07452623453514405
-  - 0.07220307408545514
-  - 0.19939976249212527
-  - 0.0029636769517625704
-  - 0.10061407198366538
-  - 0.007155278859709327
-  - 0.1287777506332237
-  - 0.012811071811255986
-  - 0.06105866230182386
-  - 0.009111644875938468
-  - 0.05412939210592716
-  - 0.005629435041052948
-  - 0.060432264009243536
-  - 0.11513124920760012
-  - 0.10061832157607467
-  - 0.01502355311298454
+  - 0.28491130975216233
+  - 0.08008725475144021
+  - 0.11383934367515508
+  - 0.027598204962189694
+  - 0.035914085965609306
+  - 0.06337181308057305
+  - 0.058761211704184524
+  - 0.10946393577106492
+  - 0.05961502200036707
+  - 0.08146193340352416
+  - 0.008508076059097508
+  - 0.007107827372711432
+  - 0.09331866518031799
+  - 0.08227267047218702
+  - 0.13657093640954734
+  - 0.004870406265806508
+  - 0.08689467685166241
+  - 0.09452128419106305
+  - 0.08773432025116532
+  - 0.07898482635333823
+  - 0.1190883118457107
+  - 0.004565581615807144
+  - 0.06783531511474385
+  - 0.059059120060503616
+  - 0.04294787753579917
+  - 0.057122303853695926
+  - 0.0533336575993703
+  - 0.06887383775560268
+  - 0.06789283728814152
+  - 0.03901186056440553
+  - 0.0813685729637447
+  - 0.05642754247315388
+  - 0.05038269675193171
+  - 0.05039821826697917
+  - 0.05290686785156095
+  - 0.09743891522342094
+  - 0.1309322195775757
+  - 0.07721436624291039
+  - 0.06654919010193856
+  - 0.18946225268440345
