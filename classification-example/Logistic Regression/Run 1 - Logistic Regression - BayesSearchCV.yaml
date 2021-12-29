@@ -16,130 +16,130 @@ parameter_names_mapping:
   model__C: C
 test_score_rankings:
   roc_auc:
-  - 33
-  - 32
-  - 37
-  - 23
-  - 24
-  - 36
-  - 39
   - 35
-  - 40
   - 38
-  - 22
-  - 7
-  - 28
-  - 2
-  - 3
-  - 5
-  - 15
+  - 40
   - 26
-  - 29
-  - 9
-  - 1
-  - 30
-  - 20
-  - 19
-  - 4
-  - 25
-  - 8
-  - 18
-  - 6
-  - 31
-  - 34
+  - 23
+  - 32
+  - 39
+  - 33
+  - 37
+  - 36
+  - 5
   - 13
-  - 14
+  - 25
+  - 3
   - 10
-  - 21
-  - 27
+  - 28
+  - 18
+  - 22
   - 11
-  - 17
-  - 16
+  - 20
+  - 9
+  - 19
+  - 1
+  - 31
+  - 30
+  - 24
   - 12
+  - 34
+  - 16
+  - 27
+  - 15
+  - 4
+  - 29
+  - 7
+  - 6
+  - 21
+  - 8
+  - 14
+  - 2
+  - 17
 test_score_averages:
   roc_auc:
-  - 0.7319021606649477
-  - 0.7337630803195927
-  - 0.7282531956387299
-  - 0.7579857780339272
-  - 0.7577752918430906
-  - 0.7287860562697802
-  - 0.7250247694622778
-  - 0.7312989689233373
-  - 0.7192098254782333
-  - 0.7273080637762762
-  - 0.7582846340785163
-  - 0.7649436358655789
-  - 0.7540394182803208
-  - 0.7703082910908046
-  - 0.7701558703909419
-  - 0.767569002184896
-  - 0.7619192495422306
-  - 0.7561451562585134
-  - 0.7520365237003575
-  - 0.7642543887872669
-  - 0.7752941640021426
-  - 0.7478686406754707
-  - 0.759711676036602
-  - 0.7601299258692077
-  - 0.7677137023982081
-  - 0.7569943990132835
-  - 0.7647536052319668
-  - 0.7604877431160977
-  - 0.7660846609388459
-  - 0.7418745667840609
-  - 0.7313250135006033
-  - 0.7622744950249658
-  - 0.7620035503454728
-  - 0.7634057972118772
-  - 0.7584961997837928
-  - 0.7546204148157528
-  - 0.7633061195500475
-  - 0.7608821314362253
-  - 0.7616957192216038
-  - 0.763227501286695
+  - 0.7295193601470402
+  - 0.7249827192338965
+  - 0.7186983391999417
+  - 0.7524808634673728
+  - 0.755201647976793
+  - 0.7350396126882185
+  - 0.7231305055752684
+  - 0.7324733169365242
+  - 0.7271778570701068
+  - 0.7271945187434703
+  - 0.7689749740794983
+  - 0.7632250302084467
+  - 0.753718984681248
+  - 0.7703870312284855
+  - 0.764942578155629
+  - 0.7515366027237986
+  - 0.7585786475377472
+  - 0.7555599583427337
+  - 0.7642787786092535
+  - 0.7572398293196491
+  - 0.7654253705823754
+  - 0.7574361478012323
+  - 0.7739101942189043
+  - 0.7401372270482363
+  - 0.7511138890288311
+  - 0.7541016709528765
+  - 0.7638531984088571
+  - 0.732429809338077
+  - 0.7610211461441501
+  - 0.7517562231159914
+  - 0.7618118474923424
+  - 0.7694732930017374
+  - 0.7513438036867645
+  - 0.765975534820101
+  - 0.7665429954558111
+  - 0.7564846227006444
+  - 0.7656962131132807
+  - 0.7627692522150636
+  - 0.7716710318183619
+  - 0.7588136339710956
 test_score_standard_deviations:
   roc_auc:
-  - 0.027238491505025407
-  - 0.03444181083437436
-  - 0.034974554400039104
-  - 0.04560707600644358
-  - 0.040243082644947324
-  - 0.031441851703889155
-  - 0.023590287163535104
-  - 0.026727559984964913
-  - 0.046019817078819046
-  - 0.02772208610258132
-  - 0.03943332147840372
-  - 0.041425630076701754
-  - 0.04749293238225287
-  - 0.03245971624808657
-  - 0.04036735240143674
-  - 0.05457295175405028
-  - 0.040488693614545566
-  - 0.035520930337727005
-  - 0.028452079999569217
-  - 0.04128635276039804
-  - 0.04428169880065521
-  - 0.03221401214592912
-  - 0.031483874442622455
-  - 0.04995775510201994
-  - 0.049260015810499456
-  - 0.04605160222538805
-  - 0.028618704264318146
-  - 0.04448508649044841
-  - 0.03638243799928938
-  - 0.0469710794720692
-  - 0.02251679575602979
-  - 0.017648902637094403
-  - 0.022440955973421557
-  - 0.028505885666147746
-  - 0.054886674888206956
-  - 0.029172467838772146
-  - 0.06037728359777689
-  - 0.03490157907664696
-  - 0.03287475782925129
-  - 0.03588886610139938
+  - 0.045283908540153385
+  - 0.040942943953929056
+  - 0.020066636980300808
+  - 0.02316575383818613
+  - 0.03655890569564042
+  - 0.034899202524967504
+  - 0.04612944885299557
+  - 0.048244189435748645
+  - 0.036188349785979505
+  - 0.024364524932148558
+  - 0.03373486574889105
+  - 0.05090819360431811
+  - 0.03528564262459947
+  - 0.04484183032630092
+  - 0.030444566048740514
+  - 0.028228303103565198
+  - 0.0396180269756359
+  - 0.03098916447606982
+  - 0.04825961683015079
+  - 0.03714037087246274
+  - 0.02950851401509138
+  - 0.04682132910765684
+  - 0.036549774991655654
+  - 0.030393610782180325
+  - 0.023924153148809354
+  - 0.031215346946980846
+  - 0.03472119795155115
+  - 0.04547219189241231
+  - 0.03860570604204366
+  - 0.03254522052703814
+  - 0.03499038629848758
+  - 0.03526656617622967
+  - 0.04071724301960513
+  - 0.05334091434883416
+  - 0.025564445931310388
+  - 0.0296081474972377
+  - 0.03333854455365909
+  - 0.034192020444790916
+  - 0.03964720287162408
+  - 0.04137990153657043
 parameter_iterations:
 - model__C: 41.01629484574285
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
@@ -160,11 +160,11 @@ parameter_iterations:
 - model__C: 79.95734862630124
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__C: 73.40546151837698
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
+  prep__numeric__scaler__transformer: None
 - model__C: 61.711765056646605
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
@@ -181,27 +181,39 @@ parameter_iterations:
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
-- model__C: 0.02578314226026371
+- model__C: 0.10782142349722036
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__C: 0.08728754766834596
+  prep__numeric__scaler__transformer: None
+- model__C: 0.17217410826363677
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
+  prep__numeric__scaler__transformer: None
 - model__C: 99.95632279349023
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__C: 0.02319999424396197
+  prep__numeric__scaler__transformer: None
+- model__C: 0.03315049606762403
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.04128727686768887
+- model__C: 0.11448596277072842
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.028856240624805032
+- model__C: 0.01815149804462774
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: None
+- model__C: 0.01
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__C: 99.96376231964459
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__C: 0.025537280346410507
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
@@ -209,35 +221,23 @@ parameter_iterations:
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.051388333365894066
+- model__C: 99.99406341100054
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__C: 99.995579800155
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.01
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.049574002122399145
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
+  prep__numeric__scaler__transformer: None
 - model__C: 99.93540057956632
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__C: 0.035794976094930195
+  prep__numeric__scaler__transformer: None
+- model__C: 0.21380623392192172
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
+  prep__numeric__scaler__transformer: None
 - model__C: 0.01
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.03802602670647371
+  prep__numeric__scaler__transformer: None
+- model__C: 99.94524520456629
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
@@ -248,43 +248,31 @@ parameter_iterations:
 - model__C: 0.025670090975799705
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
+  prep__numeric__scaler__transformer: None
 - model__C: 0.01
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.04718954384884397
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__C: 99.96373760641207
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__C: 0.019446267567731056
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.01
+  prep__numeric__scaler__transformer: None
+- model__C: 99.9935344473476
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.013789054804350342
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__C: 0.01
+- model__C: 99.91280169804038
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.01
+- model__C: 99.95968249264848
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: None
+- model__C: 0.1931270996286243
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 99.95444716817347
+- model__C: 99.9443699991173
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
+  prep__numeric__scaler__transformer: None
 - model__C: 0.01
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
@@ -293,176 +281,188 @@ parameter_iterations:
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__C: 0.0896556177208735
+- model__C: 99.98192994738436
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
+  prep__numeric__scaler__transformer: None
+- model__C: 0.01
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__C: 0.01
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__C: 0.10610094096801852
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: None
 - model__C: 0.01
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
 timings:
   fit time averages:
-  - 0.05308377742767334
-  - 0.04125995635986328
-  - 0.05146315097808838
-  - 0.040337228775024415
-  - 0.04909794330596924
-  - 0.05033848285675049
-  - 0.03760559558868408
-  - 0.03698241710662842
-  - 0.043306517601013186
-  - 0.04252557754516602
-  - 0.013214898109436036
-  - 0.017490792274475097
-  - 0.028045010566711426
-  - 0.017037224769592286
-  - 0.013460350036621094
-  - 0.016018319129943847
-  - 0.011360716819763184
-  - 0.015494084358215332
-  - 0.027274036407470705
-  - 0.01917858123779297
-  - 0.011529779434204102
-  - 0.041065096855163574
-  - 0.011776208877563477
-  - 0.014320111274719239
-  - 0.014691972732543945
-  - 0.033511233329772946
-  - 0.013159847259521485
-  - 0.01878948211669922
-  - 0.011288833618164063
-  - 0.030390238761901854
-  - 0.03937339782714844
-  - 0.010187172889709472
-  - 0.013749480247497559
-  - 0.01528761386871338
-  - 0.0224703311920166
-  - 0.029120540618896483
-  - 0.01311185359954834
-  - 0.020008158683776856
-  - 0.0169658899307251
-  - 0.01304919719696045
+  - 0.05182914733886719
+  - 0.03783259391784668
+  - 0.04330048561096191
+  - 0.0350783109664917
+  - 0.03333449363708496
+  - 0.07983534336090088
+  - 0.0330005407333374
+  - 0.03407604694366455
+  - 0.05211458206176758
+  - 0.03917849063873291
+  - 0.0565610408782959
+  - 0.04168095588684082
+  - 0.08820991516113282
+  - 0.014278388023376465
+  - 0.01419692039489746
+  - 0.022030949592590332
+  - 0.022862505912780762
+  - 0.03202521800994873
+  - 0.011535143852233887
+  - 0.023657822608947755
+  - 0.09444944858551026
+  - 0.10765628814697266
+  - 0.0734417200088501
+  - 0.026148104667663576
+  - 0.030838489532470703
+  - 0.025404644012451173
+  - 0.041771888732910156
+  - 0.03649113178253174
+  - 0.0355379581451416
+  - 0.02501060962677002
+  - 0.09505264759063721
+  - 0.01313941478729248
+  - 0.06414728164672852
+  - 0.01398308277130127
+  - 0.010442280769348144
+  - 0.10268228054046631
+  - 0.023284316062927246
+  - 0.013696670532226562
+  - 0.051927947998046876
+  - 0.01432485580444336
   fit time standard deviations:
-  - 0.00964048141227941
-  - 0.006865868226113146
-  - 0.011394023841608267
-  - 0.013515908248359399
-  - 0.013949364395215491
-  - 0.015162241154449646
-  - 0.00919619611335526
-  - 0.007224111472166353
-  - 0.006770621293799837
-  - 0.011146374971492902
-  - 0.001765007604437968
-  - 0.005304125272987304
-  - 0.005868801085187374
-  - 0.004853131616771849
-  - 0.0016018731995064194
-  - 0.004763052991465914
-  - 0.0020420469935545135
-  - 0.003981259625591274
-  - 0.008143734805432968
-  - 0.0061835368959648205
-  - 0.0011135608701803293
-  - 0.010557378966407308
-  - 0.0007717994091709813
-  - 0.003591285928291175
-  - 0.003948233731065382
-  - 0.010189884700598568
-  - 0.001289681845683037
-  - 0.006953666901892166
-  - 0.0007313920690787708
-  - 0.005648939573971644
-  - 0.008955266154392872
-  - 0.00020984506963049837
-  - 0.002744982002638208
-  - 0.00431099993983666
-  - 0.010702374346520565
-  - 0.008972650764913609
-  - 0.003283018140313496
-  - 0.007374379962680124
-  - 0.005453750696822631
-  - 0.002593332990566972
+  - 0.008262246829675617
+  - 0.008067463418162196
+  - 0.005149060286354365
+  - 0.008770479768258925
+  - 0.007437320578764637
+  - 0.021167458409710578
+  - 0.004694888324226057
+  - 0.0040933670594330285
+  - 0.008669078688008335
+  - 0.009288396092870447
+  - 0.018151994665867845
+  - 0.009875852905150254
+  - 0.04752514511458274
+  - 0.0027882957814076344
+  - 0.002180044561688766
+  - 0.0050714583161385034
+  - 0.005946996009798426
+  - 0.01065146494423444
+  - 0.0014756472010214428
+  - 0.006346587757962527
+  - 0.044695090734747936
+  - 0.030038281478714783
+  - 0.03146572688146854
+  - 0.016028241493604604
+  - 0.008149740142845452
+  - 0.007842438758122768
+  - 0.015012060691843309
+  - 0.019712951700683858
+  - 0.017208902175553327
+  - 0.009059576800570446
+  - 0.024478283007886435
+  - 0.00039658543939442457
+  - 0.024135221440804353
+  - 0.0038837708625503154
+  - 0.0007597091315663119
+  - 0.04384747763019193
+  - 0.007857508427437555
+  - 0.003157860906038435
+  - 0.02005933693790159
+  - 0.0036587066006404816
   score time averages:
-  - 0.015185976028442382
-  - 0.012733530998229981
-  - 0.013758683204650879
-  - 0.006302309036254883
-  - 0.006586337089538574
-  - 0.011228990554809571
-  - 0.011653876304626465
-  - 0.01270761489868164
-  - 0.013011503219604491
-  - 0.014728856086730958
-  - 0.005205106735229492
-  - 0.006103730201721192
-  - 0.004498767852783203
-  - 0.00725705623626709
-  - 0.004123044013977051
-  - 0.0059069633483886715
-  - 0.004126644134521485
-  - 0.006664490699768067
-  - 0.004056787490844727
-  - 0.006146287918090821
-  - 0.003763771057128906
-  - 0.007099962234497071
-  - 0.004151535034179687
-  - 0.005591678619384766
-  - 0.004319667816162109
-  - 0.0074511289596557615
-  - 0.004385638236999512
-  - 0.006885170936584473
-  - 0.003879070281982422
-  - 0.005003619194030762
-  - 0.01921558380126953
-  - 0.003908681869506836
-  - 0.006948733329772949
-  - 0.006167483329772949
-  - 0.006154561042785644
-  - 0.007141566276550293
-  - 0.004248213768005371
-  - 0.007253718376159668
-  - 0.006517148017883301
-  - 0.00680394172668457
+  - 0.013903236389160157
+  - 0.010547232627868653
+  - 0.014497160911560059
+  - 0.006637692451477051
+  - 0.004982280731201172
+  - 0.01274716854095459
+  - 0.01332712173461914
+  - 0.01338803768157959
+  - 0.013004374504089356
+  - 0.013174605369567872
+  - 0.007914185523986816
+  - 0.005394649505615234
+  - 0.004930329322814941
+  - 0.0060792207717895504
+  - 0.004537510871887207
+  - 0.004099035263061523
+  - 0.008879399299621582
+  - 0.006727814674377441
+  - 0.004025650024414062
+  - 0.00866687297821045
+  - 0.004409694671630859
+  - 0.0069153070449829105
+  - 0.008590364456176757
+  - 0.004108524322509766
+  - 0.007190442085266114
+  - 0.004458761215209961
+  - 0.008055806159973145
+  - 0.004496335983276367
+  - 0.006638741493225098
+  - 0.004718756675720215
+  - 0.006802153587341308
+  - 0.0038289546966552733
+  - 0.006228756904602051
+  - 0.007222294807434082
+  - 0.0038074493408203126
+  - 0.005464506149291992
+  - 0.009963250160217286
+  - 0.005037736892700195
+  - 0.007083463668823242
+  - 0.005378222465515137
   score time standard deviations:
-  - 0.005162655460389197
-  - 0.0030592895137745383
-  - 0.004734482148738828
-  - 0.0028977875562726076
-  - 0.0026222750531774614
-  - 0.0034036065248741407
-  - 0.003436504426807366
-  - 0.00397014672355868
-  - 0.005278895667400459
-  - 0.002580142701940722
-  - 0.0013668252548403683
-  - 0.0025108336502433133
-  - 0.001811490343139523
-  - 0.003933885918259677
-  - 0.00029085978210127255
-  - 0.0017764885594564856
-  - 0.0005437118963697999
-  - 0.002560410352496224
-  - 0.00045997222454028595
-  - 0.0014270587666863686
-  - 0.00013721212729946226
-  - 0.0023494488591030006
-  - 0.0002830946668119401
-  - 0.002901008271334808
-  - 0.0004956106621995422
-  - 0.0022456034357524967
-  - 0.0004096006215999711
-  - 0.004048293878104491
-  - 0.0001395653162415871
-  - 0.001585593227128091
-  - 0.006710517310733048
-  - 0.0002714076890450406
-  - 0.0036985217769103127
-  - 0.0026866301594204623
-  - 0.0019711411930871513
-  - 0.002932498856740316
-  - 0.00030256826413491036
-  - 0.0021617724243213105
-  - 0.002711076089862474
-  - 0.003309159181091285
+  - 0.004069935902135863
+  - 0.0025003307912653855
+  - 0.005603495451814009
+  - 0.0033232988885018543
+  - 0.0020095547666340433
+  - 0.003634985467784935
+  - 0.003033531540340074
+  - 0.0037087314250018994
+  - 0.0033062409249600966
+  - 0.003103784447493117
+  - 0.0021724177987494323
+  - 0.0023645424103354417
+  - 0.002414259238499997
+  - 0.0022838819698074394
+  - 0.0010980268668868563
+  - 0.000294843595731819
+  - 0.0023264335109847768
+  - 0.00360707226559424
+  - 0.00016526194271997586
+  - 0.003499571262347568
+  - 0.0007107028954296792
+  - 0.0025852644425017756
+  - 0.0015234611594095876
+  - 0.0002997422271327417
+  - 0.0035772800354188436
+  - 0.0005299683372765386
+  - 0.0029920944197651274
+  - 0.0009275307348998131
+  - 0.0026286944715273935
+  - 0.0014964450460336677
+  - 0.0026723630478065756
+  - 0.00012890200527225886
+  - 0.0029292122930181896
+  - 0.003234314310067932
+  - 9.202705142667044e-05
+  - 0.0015154468649368784
+  - 0.003215189201625022
+  - 0.0016183429195727116
+  - 0.0029089354573617284
+  - 0.002145441868939683
