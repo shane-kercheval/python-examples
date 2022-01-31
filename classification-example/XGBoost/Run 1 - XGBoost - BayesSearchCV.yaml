@@ -24,166 +24,166 @@ parameter_names_mapping:
   prep__numeric__scaler__transformer: scaler
 test_score_rankings:
   roc_auc:
+  - 28
   - 37
-  - 43
   - 46
-  - 40
-  - 45
-  - 39
-  - 44
-  - 47
-  - 42
+  - 30
   - 36
-  - 13
-  - 27
-  - 8
-  - 24
+  - 44
+  - 45
+  - 42
+  - 33
   - 29
-  - 23
-  - 11
-  - 10
-  - 12
-  - 5
-  - 14
-  - 1
-  - 32
-  - 2
-  - 25
   - 6
+  - 25
+  - 8
+  - 21
+  - 10
+  - 27
   - 41
-  - 22
-  - 3
+  - 19
   - 15
-  - 7
+  - 13
+  - 31
+  - 17
+  - 39
+  - 9
+  - 32
+  - 48
+  - 16
+  - 23
+  - 35
+  - 22
+  - 24
+  - 50
+  - 3
+  - 14
+  - 38
+  - 43
+  - 26
+  - 18
+  - 20
+  - 47
+  - 40
   - 49
   - 4
-  - 26
-  - 21
-  - 17
-  - 9
-  - 19
-  - 31
-  - 28
-  - 30
-  - 38
+  - 1
+  - 7
+  - 12
+  - 2
+  - 11
   - 34
-  - 16
-  - 18
-  - 48
-  - 20
-  - 50
-  - 35
-  - 33
+  - 5
 test_score_averages:
   roc_auc:
-  - 0.7183933263321676
-  - 0.710145052183053
-  - 0.7056393100957165
-  - 0.7169108973257126
-  - 0.706048305565548
-  - 0.7169346931301968
-  - 0.7082644287053901
-  - 0.7036308778319651
-  - 0.7130888591014034
-  - 0.7218465043637039
-  - 0.7573171229452755
-  - 0.7375701086987697
-  - 0.7592183082565097
-  - 0.7439318147848877
-  - 0.7363048199672525
-  - 0.745059623518103
-  - 0.7577333117012691
-  - 0.7579293315800095
-  - 0.7574994828557324
-  - 0.7626104871950633
-  - 0.7573061533667704
-  - 0.7745010413550899
-  - 0.7313664457801761
-  - 0.769332210290314
-  - 0.7437739217711931
-  - 0.7616478383385434
-  - 0.7137566305944257
-  - 0.7451664123216816
-  - 0.7672132381852071
-  - 0.7558107487492141
-  - 0.7611832226086858
-  - 0.6775801137499559
-  - 0.7629802702294498
-  - 0.740903551332931
-  - 0.7476006501401984
-  - 0.7530965822101117
-  - 0.758923774371184
-  - 0.752187573316044
-  - 0.7344553331927087
-  - 0.736631827649396
-  - 0.7360715812255706
-  - 0.7183676100852167
-  - 0.7254533095728065
-  - 0.7542701712123113
-  - 0.7522713159537302
-  - 0.6890561043166368
-  - 0.7486685712602312
-  - 0.6623458837928207
-  - 0.7245984343677875
-  - 0.7258843687199789
+  - 0.7291412544776763
+  - 0.7121186961920793
+  - 0.6967451150084121
+  - 0.7264408504574035
+  - 0.7159801541561082
+  - 0.7024667788969449
+  - 0.7006973780562709
+  - 0.705249145572423
+  - 0.7191876901709537
+  - 0.7268543484011426
+  - 0.7587799403159867
+  - 0.7354544927800888
+  - 0.757689846062988
+  - 0.7415614195355488
+  - 0.7570024365241416
+  - 0.7301059498309682
+  - 0.7062617995283194
+  - 0.7448679576093775
+  - 0.7512138077878743
+  - 0.7546285622400829
+  - 0.7256978843875835
+  - 0.7489188172445964
+  - 0.7098272169980072
+  - 0.7576218697687752
+  - 0.7217754897576888
+  - 0.674698209996375
+  - 0.7508800275920858
+  - 0.7395390183711659
+  - 0.7177897115523411
+  - 0.7411547092314024
+  - 0.7368971990795605
+  - 0.6643975814952519
+  - 0.7647669115431215
+  - 0.7525207484094871
+  - 0.7111646092962719
+  - 0.7052421116417171
+  - 0.734966691259131
+  - 0.7483910235486103
+  - 0.7430791645641361
+  - 0.6811326906917905
+  - 0.7076160125012139
+  - 0.669480570119144
+  - 0.7621421151355332
+  - 0.7676473181792952
+  - 0.7580955094546249
+  - 0.7549753066864605
+  - 0.7651755362372359
+  - 0.7565789516498823
+  - 0.7191499686855262
+  - 0.7621204716990746
 test_score_standard_deviations:
   roc_auc:
-  - 0.04431687922789146
-  - 0.04602555505124504
-  - 0.02879491048076435
-  - 0.0356455531355342
-  - 0.04098117319961135
-  - 0.023213612974974814
-  - 0.027776792106816155
-  - 0.035567311760550384
-  - 0.03640953006768028
-  - 0.03739425469984476
-  - 0.03302864669431713
-  - 0.04496513977519811
-  - 0.03338327036838416
-  - 0.04141890769647965
-  - 0.020794266155583812
-  - 0.013074880434367874
-  - 0.03486959619819098
-  - 0.05658703116422921
-  - 0.024530151515931402
-  - 0.02204158479055879
-  - 0.032578771157090604
-  - 0.032410583615038006
-  - 0.03430259421043358
-  - 0.045830933731233425
-  - 0.03799167146505768
-  - 0.03545474631217114
-  - 0.02561680923292355
-  - 0.036931403832604015
-  - 0.04607344799163739
-  - 0.033546213441884964
-  - 0.024789819928612802
-  - 0.03533862971037048
-  - 0.02952029508624572
-  - 0.04697397613519971
-  - 0.03910912132054977
-  - 0.038847220221059284
-  - 0.026540328126495753
-  - 0.02592569729666903
-  - 0.03917737489740762
-  - 0.023268740211936166
-  - 0.04257641031453562
-  - 0.0449420392420059
-  - 0.04738392688298526
-  - 0.03658359406395689
-  - 0.048931325502041476
-  - 0.019520014354361195
-  - 0.04297798845539979
-  - 0.05985232453505972
-  - 0.04577834075077294
-  - 0.04811802031134363
+  - 0.03532285265983495
+  - 0.04649930474348151
+  - 0.03451745392865856
+  - 0.04010837132866505
+  - 0.03386696890769769
+  - 0.01920758861957068
+  - 0.032369605507513576
+  - 0.02630062541029723
+  - 0.025090124663035198
+  - 0.025220053075706284
+  - 0.04066983263272339
+  - 0.019588460539096294
+  - 0.046468557296363566
+  - 0.028362282868413247
+  - 0.03100093715804798
+  - 0.03956658751285148
+  - 0.04224097953550338
+  - 0.03446855798188544
+  - 0.029652229928044956
+  - 0.038624648393870406
+  - 0.027573331327285237
+  - 0.02760121940685055
+  - 0.023264894286705175
+  - 0.030606407160683413
+  - 0.04889489337301883
+  - 0.04548081677501296
+  - 0.034196042531587305
+  - 0.046794990792582154
+  - 0.03232552138674153
+  - 0.023731186164783192
+  - 0.022649983373207425
+  - 0.028910366005686458
+  - 0.025462505757786417
+  - 0.031227951913633666
+  - 0.04522164159878795
+  - 0.03640213598589899
+  - 0.03431642689241493
+  - 0.027886974421701956
+  - 0.02881984771531817
+  - 0.05731613248440156
+  - 0.02620803305935437
+  - 0.04404795028967376
+  - 0.03134401928231047
+  - 0.01949279108662465
+  - 0.04392968647949514
+  - 0.05289319956891698
+  - 0.03530595963421766
+  - 0.024450410361572507
+  - 0.02427927125171942
+  - 0.04018844186577038
 parameter_trials:
 - model__colsample_bytree: 0.4160029192647807
   model__learning_rate: 0.22104046552142426
   model__max_depth: 10
   model__n_estimators: 666
-  model__subsample: 0.8350739741344673
+  model__subsample: 0.7031331534420412
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
@@ -191,7 +191,7 @@ parameter_trials:
   model__learning_rate: 0.26616143044045004
   model__max_depth: 5
   model__n_estimators: 1905
-  model__subsample: 0.9320639577324754
+  model__subsample: 0.8777151239184556
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
@@ -199,7 +199,7 @@ parameter_trials:
   model__learning_rate: 0.27642953128411935
   model__max_depth: 4
   model__n_estimators: 895
-  model__subsample: 0.5939775931836743
+  model__subsample: 0.2691596677306137
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
@@ -207,7 +207,7 @@ parameter_trials:
   model__learning_rate: 0.059842752805002605
   model__max_depth: 7
   model__n_estimators: 1615
-  model__subsample: 0.7615261640271918
+  model__subsample: 0.5707470952489453
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
@@ -215,7 +215,7 @@ parameter_trials:
   model__learning_rate: 0.13702846406786778
   model__max_depth: 7
   model__n_estimators: 1446
-  model__subsample: 0.9519260362533433
+  model__subsample: 0.913466865256018
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
@@ -223,7 +223,7 @@ parameter_trials:
   model__learning_rate: 0.2824172239048038
   model__max_depth: 4
   model__n_estimators: 417
-  model__subsample: 0.9002516157283724
+  model__subsample: 0.8204529083110704
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
@@ -231,7 +231,7 @@ parameter_trials:
   model__learning_rate: 0.23485566986008594
   model__max_depth: 6
   model__n_estimators: 1755
-  model__subsample: 0.796309837652784
+  model__subsample: 0.633357707775011
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
@@ -239,7 +239,7 @@ parameter_trials:
   model__learning_rate: 0.27680267566682176
   model__max_depth: 6
   model__n_estimators: 1683
-  model__subsample: 0.6620299911421869
+  model__subsample: 0.3916539840559363
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: None
@@ -247,7 +247,7 @@ parameter_trials:
   model__learning_rate: 0.21318021894019612
   model__max_depth: 9
   model__n_estimators: 861
-  model__subsample: 0.6905323823987464
+  model__subsample: 0.44295828831774353
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
@@ -255,532 +255,532 @@ parameter_trials:
   model__learning_rate: 0.24717070570248795
   model__max_depth: 8
   model__n_estimators: 546
-  model__subsample: 0.7893321681141925
+  model__subsample: 0.6207979026055463
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.7962611109666905
+- model__colsample_bytree: 0.08421115929901542
   model__learning_rate: 0.01
   model__max_depth: 10
-  model__n_estimators: 156
-  model__subsample: 0.7476888396861485
+  model__n_estimators: 1823
+  model__subsample: 0.22376364645022406
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__colsample_bytree: 0.01
   model__learning_rate: 0.01
   model__max_depth: 10
-  model__n_estimators: 50
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.01
-  model__learning_rate: 0.01
-  model__max_depth: 3
   model__n_estimators: 50
   model__subsample: 1.0
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.46727207399159115
-  model__learning_rate: 0.12601472625633944
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.01
+  model__max_depth: 10
+  model__n_estimators: 2000
+  model__subsample: 0.1
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 0.6065413967740271
+  model__learning_rate: 0.01
+  model__max_depth: 10
+  model__n_estimators: 2000
+  model__subsample: 0.43119463810964986
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 0.048335768627225786
+  model__learning_rate: 0.01136065688268026
   model__max_depth: 9
-  model__n_estimators: 51
-  model__subsample: 0.5556523968176132
+  model__n_estimators: 285
+  model__subsample: 0.11718352911818523
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.9887362495986771
-  model__learning_rate: 0.01666463613912738
-  model__max_depth: 6
-  model__n_estimators: 1992
-  model__subsample: 0.584016843988254
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.9683873322257348
-  model__learning_rate: 0.010214510706037674
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__colsample_bytree: 0.5001203222226797
+  model__learning_rate: 0.03201179945791919
   model__max_depth: 10
-  model__n_estimators: 653
-  model__subsample: 0.8403100986314143
+  model__n_estimators: 1907
+  model__subsample: 0.10021159551100563
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.09126402168435382
+  model__max_depth: 10
+  model__n_estimators: 1785
+  model__subsample: 0.15940165019958488
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.2160192086170989
-  model__learning_rate: 0.010626873554991536
-  model__max_depth: 8
-  model__n_estimators: 623
-  model__subsample: 0.9252492072291955
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.01
+  model__max_depth: 9
+  model__n_estimators: 1922
+  model__subsample: 0.38002580008793974
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 0.7207725616169308
+  model__learning_rate: 0.02351939030602585
+  model__max_depth: 9
+  model__n_estimators: 95
+  model__subsample: 0.6568798506341175
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model__colsample_bytree: 0.01
-  model__learning_rate: 0.01
-  model__max_depth: 3
-  model__n_estimators: 222
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  model__learning_rate: 0.017022513219900365
+  model__max_depth: 10
+  model__n_estimators: 1764
+  model__subsample: 0.1
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.40314029170082
+- model__colsample_bytree: 0.8774037457099605
   model__learning_rate: 0.01
-  model__max_depth: 3
-  model__n_estimators: 452
+  model__max_depth: 10
+  model__n_estimators: 984
   model__subsample: 1.0
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
-- model__colsample_bytree: 0.23381229683714536
-  model__learning_rate: 0.010924847496266033
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.01
+  model__max_depth: 10
+  model__n_estimators: 727
+  model__subsample: 0.1895505870635225
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.01
   model__max_depth: 5
-  model__n_estimators: 1020
-  model__subsample: 0.5873916564022927
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.24935799248140683
-  model__learning_rate: 0.06319275578884848
-  model__max_depth: 3
-  model__n_estimators: 780
-  model__subsample: 0.6595873021245677
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.01
-  model__learning_rate: 0.01
-  model__max_depth: 3
-  model__n_estimators: 2000
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__colsample_bytree: 0.01
-  model__learning_rate: 0.01
-  model__max_depth: 10
-  model__n_estimators: 2000
-  model__subsample: 0.9885983329876473
+  model__n_estimators: 50
+  model__subsample: 0.1
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: None
 - model__colsample_bytree: 0.01
-  model__learning_rate: 0.01
-  model__max_depth: 3
-  model__n_estimators: 1462
-  model__subsample: 0.55083691172624
+  model__learning_rate: 0.020278132151339716
+  model__max_depth: 9
+  model__n_estimators: 701
+  model__subsample: 0.1
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 1.0
+  model__learning_rate: 0.020499061204489202
+  model__max_depth: 8
+  model__n_estimators: 1726
+  model__subsample: 0.1
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.04191540390742086
+  model__max_depth: 9
+  model__n_estimators: 50
+  model__subsample: 0.9026052157094342
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 0.3303413938503384
+  model__learning_rate: 0.017818599233791366
+  model__max_depth: 9
+  model__n_estimators: 712
+  model__subsample: 0.1
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.02271579268239867
+  model__max_depth: 10
+  model__n_estimators: 566
+  model__subsample: 1.0
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model__colsample_bytree: 1.0
-  model__learning_rate: 0.01
-  model__max_depth: 6
-  model__n_estimators: 50
-  model__subsample: 0.5
+  model__learning_rate: 0.07175271006980719
+  model__max_depth: 3
+  model__n_estimators: 650
+  model__subsample: 0.34033406734215377
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.3724635299255283
-  model__learning_rate: 0.01
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__colsample_bytree: 0.013461851806932441
+  model__learning_rate: 0.17887475205606373
   model__max_depth: 3
-  model__n_estimators: 2000
-  model__subsample: 0.6552639078158312
+  model__n_estimators: 1268
+  model__subsample: 0.8768181168587077
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model__colsample_bytree: 1.0
+  model__learning_rate: 0.1649386600945301
+  model__max_depth: 3
+  model__n_estimators: 103
+  model__subsample: 0.1
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 1.0
+  model__learning_rate: 0.17938529269056155
+  model__max_depth: 5
+  model__n_estimators: 1188
+  model__subsample: 0.1
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: None
 - model__colsample_bytree: 0.01
-  model__learning_rate: 0.0811417685217178
-  model__max_depth: 4
-  model__n_estimators: 2000
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  model__learning_rate: 0.141191195815678
+  model__max_depth: 3
+  model__n_estimators: 135
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.07654680794822923
-  model__learning_rate: 0.07370305051807327
-  model__max_depth: 6
-  model__n_estimators: 50
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.13414656781324166
+  model__max_depth: 3
+  model__n_estimators: 619
+  model__subsample: 0.3277821389372305
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 1.0
+  model__learning_rate: 0.1083323273712242
+  model__max_depth: 3
+  model__n_estimators: 2000
   model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: None
+- model__colsample_bytree: 1.0
+  model__learning_rate: 0.1468935346113331
+  model__max_depth: 3
+  model__n_estimators: 1895
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: None
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.14760455116616997
+  model__max_depth: 6
+  model__n_estimators: 778
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 1.0
+  model__learning_rate: 0.01
+  model__max_depth: 10
+  model__n_estimators: 2000
+  model__subsample: 0.1
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: None
+- model__colsample_bytree: 1.0
+  model__learning_rate: 0.01
+  model__max_depth: 5
+  model__n_estimators: 1628
+  model__subsample: 0.1
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: None
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.15122959954685214
+  model__max_depth: 3
+  model__n_estimators: 50
+  model__subsample: 0.716920752438039
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: None
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.1598701464790812
+  model__max_depth: 3
+  model__n_estimators: 1551
+  model__subsample: 0.8129377909193679
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
 - model__colsample_bytree: 0.01
-  model__learning_rate: 0.01
-  model__max_depth: 3
-  model__n_estimators: 1482
-  model__subsample: 0.565004391259128
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.877522489843355
-  model__learning_rate: 0.0667987060625313
+  model__learning_rate: 0.14344994031810823
   model__max_depth: 7
   model__n_estimators: 50
-  model__subsample: 0.6578031122400387
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.01
-  model__learning_rate: 0.01
-  model__max_depth: 3
-  model__n_estimators: 2000
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.01
-  model__learning_rate: 0.1190249833974287
-  model__max_depth: 3
-  model__n_estimators: 50
-  model__subsample: 0.8910136431859237
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.12814088739992568
-  model__learning_rate: 0.041051549694646416
-  model__max_depth: 3
-  model__n_estimators: 50
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.01
-  model__learning_rate: 0.05652974156516718
-  model__max_depth: 10
-  model__n_estimators: 648
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.01
-  model__learning_rate: 0.029203895862435776
-  model__max_depth: 3
-  model__n_estimators: 2000
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 1.0
-  model__learning_rate: 0.05958348750586894
-  model__max_depth: 3
-  model__n_estimators: 50
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.16462545226436534
-  model__learning_rate: 0.03250764634068794
-  model__max_depth: 3
-  model__n_estimators: 720
-  model__subsample: 0.5
+  model__subsample: 0.739527682162506
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
 - model__colsample_bytree: 0.01
-  model__learning_rate: 0.03979469458024994
-  model__max_depth: 5
-  model__n_estimators: 50
-  model__subsample: 0.810085331385247
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.4578359799437541
-  model__learning_rate: 0.3
-  model__max_depth: 10
-  model__n_estimators: 50
-  model__subsample: 0.812952414483687
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.9947407071112833
-  model__learning_rate: 0.07903392747419313
-  model__max_depth: 10
+  model__learning_rate: 0.16451368551598844
+  model__max_depth: 3
   model__n_estimators: 50
   model__subsample: 1.0
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model__colsample_bytree: 0.7060419515847629
-  model__learning_rate: 0.1585349029646627
-  model__max_depth: 10
-  model__n_estimators: 50
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 0.22941721714014698
+  model__learning_rate: 0.01
+  model__max_depth: 7
+  model__n_estimators: 1750
+  model__subsample: 0.2218705814625066
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.4278487489522657
-  model__learning_rate: 0.2902951484741004
-  model__max_depth: 10
-  model__n_estimators: 1917
-  model__subsample: 0.9274272134389175
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.06377819322440227
+  model__max_depth: 4
+  model__n_estimators: 1485
+  model__subsample: 0.26189027287809796
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 0.8958307524735796
+  model__learning_rate: 0.01
+  model__max_depth: 8
+  model__n_estimators: 1075
+  model__subsample: 0.2610914788988883
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: MinMaxScaler()
-- model__colsample_bytree: 0.5967777967126799
-  model__learning_rate: 0.10742734516630992
-  model__max_depth: 10
-  model__n_estimators: 50
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.8195684897683232
+- model__colsample_bytree: 0.01
   model__learning_rate: 0.01
   model__max_depth: 3
-  model__n_estimators: 1237
-  model__subsample: 0.5195513122702538
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  model__n_estimators: 1925
+  model__subsample: 0.3043110505682685
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
-- model__colsample_bytree: 0.20888189648816577
-  model__learning_rate: 0.18668440400321967
-  model__max_depth: 3
-  model__n_estimators: 236
-  model__subsample: 0.9598407855842298
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
 - model__colsample_bytree: 0.01
-  model__learning_rate: 0.1844242791095504
-  model__max_depth: 3
-  model__n_estimators: 2000
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__colsample_bytree: 0.9289921544455958
-  model__learning_rate: 0.21427090389095638
-  model__max_depth: 3
-  model__n_estimators: 50
-  model__subsample: 0.7213639828097426
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__colsample_bytree: 0.01
-  model__learning_rate: 0.05621730263355351
-  model__max_depth: 3
-  model__n_estimators: 50
-  model__subsample: 0.5
+  model__learning_rate: 0.01
+  model__max_depth: 5
+  model__n_estimators: 1114
+  model__subsample: 0.20654326436152715
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: None
 - model__colsample_bytree: 1.0
-  model__learning_rate: 0.02081016578938591
-  model__max_depth: 5
-  model__n_estimators: 1179
-  model__subsample: 0.5
+  model__learning_rate: 0.03854828611306992
+  model__max_depth: 3
+  model__n_estimators: 1649
+  model__subsample: 0.3844693067305833
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model__colsample_bytree: 0.9625492501262304
-  model__learning_rate: 0.14078755826109826
-  model__max_depth: 10
-  model__n_estimators: 490
-  model__subsample: 0.5
+  prep__numeric__scaler__transformer: StandardScaler()
+- model__colsample_bytree: 0.01
+  model__learning_rate: 0.01
+  model__max_depth: 5
+  model__n_estimators: 912
+  model__subsample: 0.3345201472294166
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
   prep__numeric__scaler__transformer: StandardScaler()
 timings:
   fit time averages:
-  - 0.8777765274047852
-  - 2.919739770889282
-  - 0.8456281900405884
-  - 3.382793092727661
-  - 1.2338351726531982
-  - 0.6413569211959839
-  - 1.0111799001693726
-  - 1.7125667810440064
-  - 1.7021804809570313
-  - 0.1422255277633667
-  - 0.5859696626663208
-  - 0.03822588920593262
-  - 0.03594670295715332
-  - 0.12142977714538575
-  - 2.4865278244018554
-  - 1.4982334136962892
-  - 0.8650799751281738
-  - 0.06280300617218018
-  - 0.22505042552947999
-  - 0.5404589653015137
-  - 0.28739151954650877
-  - 0.45584979057312014
-  - 0.5602797985076904
-  - 0.34022443294525145
-  - 0.09606261253356933
-  - 0.7977338552474975
-  - 0.48569450378417967
-  - 0.03770742416381836
-  - 0.3645915985107422
-  - 0.094289231300354
-  - 0.42317886352539064
-  - 0.023654603958129884
-  - 0.039333248138427736
-  - 0.27419042587280273
-  - 0.525847339630127
-  - 0.05701158046722412
-  - 0.3746666431427002
-  - 0.036070823669433594
-  - 0.14245872497558593
-  - 0.34166722297668456
-  - 0.08940529823303223
-  - 0.8837648868560791
-  - 0.08610768318176269
-  - 0.741511344909668
-  - 0.130426025390625
-  - 0.45697174072265623
-  - 0.07883980274200439
-  - 0.02663397789001465
-  - 2.5337253332138063
-  - 1.0870973110198974
+  - 0.8981613159179688
+  - 3.0764225006103514
+  - 0.8291358232498169
+  - 4.301778268814087
+  - 1.923969531059265
+  - 1.458303689956665
+  - 1.4233129024505615
+  - 1.8828296422958375
+  - 1.6845429182052611
+  - 0.18679664134979249
+  - 1.0126490116119384
+  - 0.14172794818878173
+  - 0.45804882049560547
+  - 2.6700400829315187
+  - 0.13521459102630615
+  - 1.3682594299316406
+  - 0.4699500799179077
+  - 0.6533085584640503
+  - 0.19113826751708984
+  - 0.4760520696640015
+  - 2.2872647762298586
+  - 0.1913494348526001
+  - 0.04615449905395508
+  - 0.18433020114898682
+  - 0.8813337564468384
+  - 0.0331096887588501
+  - 0.43091330528259275
+  - 0.2317120313644409
+  - 0.43778235912323
+  - 0.3466908931732178
+  - 0.08219890594482422
+  - 0.48769340515136717
+  - 0.05991201400756836
+  - 0.1616368055343628
+  - 2.7727609634399415
+  - 1.4644547700881958
+  - 0.29412500858306884
+  - 1.914301323890686
+  - 1.8736560583114623
+  - 0.02733583450317383
+  - 0.38780364990234373
+  - 0.024591588973999025
+  - 0.02633662223815918
+  - 1.273065161705017
+  - 0.4046354055404663
+  - 2.039283585548401
+  - 0.5610472440719605
+  - 0.3501904487609863
+  - 2.382696032524109
+  - 0.2880760669708252
   fit time standard deviations:
-  - 0.1296134794322092
-  - 0.47843925208422716
-  - 0.09910679135437703
-  - 0.49166026267001084
-  - 0.17230047183097777
-  - 0.09908603810543637
-  - 0.14160177568786442
-  - 0.22724873378777166
-  - 0.2266600609958489
-  - 0.012112207423728727
-  - 0.08450696633887843
-  - 0.009239766289308785
-  - 0.010423601410360141
-  - 0.009852209398863745
-  - 0.27573053020214566
-  - 0.24474856923778937
-  - 0.12440196838075444
-  - 0.012376693912416841
-  - 0.041099520389362175
-  - 0.07798752652313677
-  - 0.047022335583846435
-  - 0.06152582145474327
-  - 0.07195947550104487
-  - 0.0434337999141915
-  - 0.010376068590348612
-  - 0.10963689898858081
-  - 0.08080631282922734
-  - 0.009522142190305576
-  - 0.05141996102936266
-  - 0.012145076616140425
-  - 0.06813131522611345
-  - 0.005296727561164433
-  - 0.011147875092316921
-  - 0.05632944672062423
-  - 0.0922031216496255
-  - 0.009805984592055663
-  - 0.06148507798359158
-  - 0.006646216402919353
-  - 0.02839425081748608
-  - 0.06793633782630086
-  - 0.007391662316600695
-  - 0.1177690226112801
-  - 0.012376537495317617
-  - 0.08958563805788897
-  - 0.014757351322807396
-  - 0.05607842215674174
-  - 0.00714404716173353
-  - 0.007321575720592506
-  - 0.3450757517445498
-  - 0.1348413045218898
+  - 0.12769681801591057
+  - 0.4772033121703838
+  - 0.15277264440924326
+  - 0.35735077372651136
+  - 0.3559296159687761
+  - 0.34551636321954615
+  - 0.22785558448628487
+  - 0.3271864492740549
+  - 0.28931432251643113
+  - 0.017238378956570384
+  - 0.20799813429499553
+  - 0.06342527685320382
+  - 0.06556804988595559
+  - 0.4216426975985555
+  - 0.034058720250200694
+  - 0.28196644166776125
+  - 0.062320912511258014
+  - 0.0933199432162706
+  - 0.030627704505566122
+  - 0.09281915051937599
+  - 0.4007442309480014
+  - 0.028655875012529298
+  - 0.016732840110558176
+  - 0.031518386929896614
+  - 0.1470879143228809
+  - 0.012469507552629766
+  - 0.06361268481848646
+  - 0.027599965053236766
+  - 0.07294679708564471
+  - 0.05012863027285384
+  - 0.009505292952210838
+  - 0.06391736351122847
+  - 0.015062236619836945
+  - 0.01157996863054761
+  - 0.38842702007773644
+  - 0.29932998606252337
+  - 0.0598753062620979
+  - 0.3156256208622168
+  - 0.3946184938125065
+  - 0.006035977953437134
+  - 0.06480693806255375
+  - 0.005613228088670975
+  - 0.008455723013334408
+  - 0.19382380609224134
+  - 0.07326875203674463
+  - 0.30355297180601337
+  - 0.0964545132505345
+  - 0.0503661218975433
+  - 0.4325419107073651
+  - 0.04968031580307358
   score time averages:
-  - 0.014821839332580567
-  - 0.02251441478729248
-  - 0.012158417701721191
-  - 0.019997596740722656
-  - 0.027711009979248045
-  - 0.009894371032714844
-  - 0.02423593997955322
-  - 0.014556384086608887
-  - 0.012055087089538574
-  - 0.010313773155212402
-  - 0.013660883903503418
-  - 0.012883186340332031
-  - 0.016279172897338868
-  - 0.007335925102233886
-  - 0.04932048320770264
-  - 0.028818225860595702
-  - 0.02319967746734619
-  - 0.008908605575561524
-  - 0.020797181129455566
-  - 0.021197795867919922
-  - 0.018538403511047363
-  - 0.01941659450531006
-  - 0.020208859443664552
-  - 0.01893019676208496
-  - 0.020551300048828124
-  - 0.019968247413635253
-  - 0.019393086433410645
-  - 0.014942646026611328
-  - 0.008528757095336913
-  - 0.014461708068847657
-  - 0.017763280868530275
-  - 0.007760095596313477
-  - 0.014192795753479004
-  - 0.02776830196380615
-  - 0.0220367431640625
-  - 0.019409799575805665
-  - 0.011678385734558105
-  - 0.015417146682739257
-  - 0.014459323883056641
-  - 0.0109283447265625
-  - 0.016682696342468262
-  - 0.02174246311187744
-  - 0.0168503999710083
-  - 0.018255233764648438
-  - 0.006603717803955078
-  - 0.019780349731445313
-  - 0.009048080444335938
-  - 0.006763243675231933
-  - 0.014701128005981445
-  - 0.009923076629638672
+  - 0.02877640724182129
+  - 0.04885268211364746
+  - 0.017416763305664062
+  - 0.05621626377105713
+  - 0.05506069660186767
+  - 0.06915152072906494
+  - 0.04726262092590332
+  - 0.04520523548126221
+  - 0.03155162334442139
+  - 0.013275837898254395
+  - 0.023865437507629393
+  - 0.06439781188964844
+  - 0.02831003665924072
+  - 0.10142099857330322
+  - 0.015641951560974122
+  - 0.03435685634613037
+  - 0.060016417503356935
+  - 0.018004822731018066
+  - 0.028542137145996092
+  - 0.026858258247375488
+  - 0.07926797866821289
+  - 0.009275674819946289
+  - 0.020983338356018066
+  - 0.021657848358154298
+  - 0.02238740921020508
+  - 0.011401700973510741
+  - 0.015146422386169433
+  - 0.03219084739685059
+  - 0.028647089004516603
+  - 0.01525115966796875
+  - 0.008881402015686036
+  - 0.01791248321533203
+  - 0.010715150833129882
+  - 0.00820457935333252
+  - 0.014377140998840332
+  - 0.02708568572998047
+  - 0.014357733726501464
+  - 0.020592522621154786
+  - 0.021762394905090333
+  - 0.008196592330932617
+  - 0.020698189735412598
+  - 0.007859182357788087
+  - 0.0073740482330322266
+  - 0.02391355037689209
+  - 0.018726563453674315
+  - 0.024364161491394042
+  - 0.013692307472229003
+  - 0.019712066650390624
+  - 0.02507064342498779
+  - 0.014058256149291992
   score time standard deviations:
-  - 0.0054528295703448
-  - 0.011012153389558344
-  - 0.003768190384860768
-  - 0.00456527445256193
-  - 0.01153867054255839
-  - 0.004727377528625439
-  - 0.006850267730676739
-  - 0.004161416279691817
-  - 0.0036414668252544684
-  - 0.005583202444721789
-  - 0.006489534590216425
-  - 0.0016791786403423641
-  - 0.006361766965216498
-  - 0.00257926224875342
-  - 0.009710002945962942
-  - 0.006935423377425467
-  - 0.008430847467228724
-  - 0.004213655913771143
-  - 0.008950601820695878
-  - 0.005589434370546514
-  - 0.006371229359476744
-  - 0.003822406928463235
-  - 0.004445377582964016
-  - 0.006117078163893895
-  - 0.006951420203566492
-  - 0.0046830979543818095
-  - 0.00824499514347456
-  - 0.005462188598911305
-  - 0.002976162356988202
-  - 0.0031232627962613094
-  - 0.009045562852272766
-  - 0.002941245705806506
-  - 0.004618084665594047
-  - 0.010582411695266884
-  - 0.007658958883930317
-  - 0.004923765274357354
-  - 0.004151665728916144
-  - 0.004158724210379206
-  - 0.009285044356870777
-  - 0.005259527349281811
-  - 0.00419095701853506
-  - 0.004867207772449889
-  - 0.004941219320685051
-  - 0.00382063062095844
-  - 0.0020390900732856726
-  - 0.004319314550338567
-  - 0.003282303230997289
-  - 0.0012905804807116876
-  - 0.004834606552277742
-  - 0.0038092984413744353
+  - 0.011594420488163547
+  - 0.025129032579007213
+  - 0.007272147690686727
+  - 0.014080330811194738
+  - 0.019622292346179543
+  - 0.028649682451069084
+  - 0.021858568473384042
+  - 0.02482779597144564
+  - 0.024124034560931075
+  - 0.0043845459549885024
+  - 0.00633401907095911
+  - 0.049669489202872556
+  - 0.007109499118900197
+  - 0.03719042482742134
+  - 0.006619423046807976
+  - 0.018917896079607525
+  - 0.027347087390023603
+  - 0.009539842413756012
+  - 0.01259339206820647
+  - 0.009192462544560727
+  - 0.031364044015906506
+  - 0.004493509583828871
+  - 0.008488650770651545
+  - 0.00810227600955952
+  - 0.006091130843857195
+  - 0.00379440368997958
+  - 0.004527249335077493
+  - 0.01589614712182538
+  - 0.01242695607897365
+  - 0.008324051961240548
+  - 0.0029636139259866657
+  - 0.0036881238923574147
+  - 0.0039934405650824045
+  - 0.00218361996312212
+  - 0.004917231621515872
+  - 0.008732672797022554
+  - 0.005721173932324961
+  - 0.006437983376157195
+  - 0.005822921300437012
+  - 0.0037005034283112102
+  - 0.010980784080532022
+  - 0.0027395528279180155
+  - 0.00354219746232757
+  - 0.00637941178508939
+  - 0.01314853330834123
+  - 0.007205984933538026
+  - 0.00559790336055979
+  - 0.011045728519481294
+  - 0.01221281720965774
+  - 0.005158791800929862
