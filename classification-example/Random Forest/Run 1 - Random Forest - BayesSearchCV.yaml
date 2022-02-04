@@ -172,7 +172,7 @@ test_score_standard_deviations:
   - 0.05688737081617773
   - 0.04109968547488257
   - 0.029557805890946174
-parameter_trials:
+trials:
 - model__max_features: 0.4065928153059274
   model__n_estimators: 3652
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()

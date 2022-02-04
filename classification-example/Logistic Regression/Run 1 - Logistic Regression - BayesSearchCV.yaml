@@ -140,7 +140,7 @@ test_score_standard_deviations:
   - 0.053629649001530194
   - 0.02516459800774209
   - 0.06334580196634484
-parameter_trials:
+trials:
 - model__C: 41.01629484574285
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()

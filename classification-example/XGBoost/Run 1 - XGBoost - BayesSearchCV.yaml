@@ -178,7 +178,7 @@ test_score_standard_deviations:
   - 0.029162972917431692
   - 0.045367092593512695
   - 0.02924586548551379
-parameter_trials:
+trials:
 - model__colsample_bytree: 0.4160029192647807
   model__learning_rate: 0.22104046552142426
   model__max_depth: 10
