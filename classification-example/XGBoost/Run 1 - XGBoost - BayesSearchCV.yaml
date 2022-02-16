@@ -17,6 +17,7 @@ parameter_names:
 - model__reg_lambda
 - prep__numeric__imputer__transformer
 - prep__numeric__scaler__transformer
+- prep__numeric__pca__transformer
 - prep__non_numeric__encoder__transformer
 parameter_names_mapping:
   model: model
@@ -31,179 +32,181 @@ parameter_names_mapping:
   model__reg_lambda: reg_lambda
   prep__numeric__imputer__transformer: imputer
   prep__numeric__scaler__transformer: scaler
+  prep__numeric__pca__transformer: pca
   prep__non_numeric__encoder__transformer: encoder
 test_score_rankings:
   roc_auc:
-  - 38
-  - 22
   - 40
-  - 43
-  - 26
-  - 47
-  - 46
-  - 17
-  - 25
-  - 32
-  - 31
-  - 50
-  - 42
-  - 34
-  - 35
-  - 33
-  - 49
-  - 39
-  - 44
-  - 5
   - 21
-  - 12
-  - 29
-  - 50
-  - 37
-  - 1
-  - 3
-  - 6
-  - 13
-  - 7
-  - 15
-  - 45
-  - 19
-  - 8
+  - 36
+  - 42
   - 24
-  - 2
+  - 47
+  - 45
+  - 20
+  - 31
+  - 33
+  - 41
+  - 22
+  - 23
+  - 50
+  - 10
+  - 5
+  - 15
+  - 51
+  - 46
+  - 34
+  - 7
+  - 28
+  - 13
+  - 11
+  - 25
+  - 3
+  - 29
+  - 19
+  - 18
+  - 17
+  - 35
+  - 49
+  - 6
+  - 48
+  - 12
+  - 16
+  - 44
+  - 1
   - 14
   - 9
-  - 30
+  - 8
   - 4
-  - 48
-  - 18
-  - 20
-  - 23
+  - 43
+  - 30
+  - 39
+  - 38
+  - 26
+  - 2
   - 27
-  - 10
-  - 41
-  - 28
-  - 11
-  - 16
-  - 36
+  - 32
+  - 37
 test_score_averages:
   roc_auc:
-  - 0.7205083835536195
-  - 0.7487100286803601
-  - 0.7182541343661777
-  - 0.7146418331909464
-  - 0.7444788771213535
-  - 0.7027184282509091
-  - 0.7098722887173429
-  - 0.7539755569345379
-  - 0.7451837296332611
-  - 0.7327220243828678
-  - 0.73326547103368
+  - 0.7135208314758981
+  - 0.7424377612899772
+  - 0.7258055634955511
+  - 0.7114533765105603
+  - 0.739132026127747
+  - 0.6891812314033935
+  - 0.6981835289987831
+  - 0.7428083560547416
+  - 0.7337993690999084
+  - 0.7303033545558619
+  - 0.7121236843796372
+  - 0.7422725360834712
+  - 0.7418707304369476
+  - 0.6571734616062261
+  - 0.7543395981053923
+  - 0.7599337799922472
+  - 0.746617582926363
   - 0.5
-  - 0.7166466226106645
-  - 0.7298334410246922
-  - 0.727962782715976
-  - 0.7316923981347689
-  - 0.680598632709027
-  - 0.7203101226333309
-  - 0.7118410651488463
-  - 0.7621886932317856
-  - 0.7492785415243776
-  - 0.7590224682090525
-  - 0.7351511697426474
-  - 0.5
-  - 0.7240949223160486
-  - 0.7660446081377409
-  - 0.7630429638152917
-  - 0.7619069286657234
-  - 0.7589550221129521
-  - 0.7612570646349731
-  - 0.7561379161342933
-  - 0.71022792777823
-  - 0.7525668160613229
-  - 0.7612466343503149
-  - 0.747479038888524
-  - 0.7642252289482301
-  - 0.7569119084511996
-  - 0.7607865526006712
-  - 0.7343245243198508
-  - 0.7626121865697849
-  - 0.6905148864033006
-  - 0.7536051599951098
-  - 0.7518402488064213
-  - 0.7480401941022766
-  - 0.7412777763658596
-  - 0.7606153358244448
-  - 0.7182105363817783
-  - 0.7401742386099742
-  - 0.7591357989427909
-  - 0.7556636154880773
+  - 0.6918959201016875
+  - 0.7285884680000303
+  - 0.7582987481968232
+  - 0.7362261940021269
+  - 0.7484244755610493
+  - 0.7523511480308633
+  - 0.7384825548081551
+  - 0.7602189812082931
+  - 0.7348417473598335
+  - 0.742925987959594
+  - 0.743246549458834
+  - 0.7451730654886223
+  - 0.726084955303738
+  - 0.6766650047483449
+  - 0.7596308078617897
+  - 0.67866320032515
+  - 0.749685736424575
+  - 0.7452515941268405
+  - 0.7028806061570669
+  - 0.7670625592692989
+  - 0.7479849975131749
+  - 0.7560036920340816
+  - 0.7561024023842448
+  - 0.7600942990798307
+  - 0.7086084220892206
+  - 0.7346710758312247
+  - 0.7141437255663116
+  - 0.7149865145938044
+  - 0.7383322561409629
+  - 0.7623249577308915
+  - 0.7379332864328508
+  - 0.733271396918395
   - 0.7245440855018346
 test_score_standard_deviations:
   roc_auc:
-  - 0.03286848422869373
-  - 0.0335064194612388
-  - 0.026740182648130086
-  - 0.038221488562690475
-  - 0.030459790384913737
-  - 0.0387319419985127
-  - 0.029414513783947462
-  - 0.037775503236683265
-  - 0.0315737263504976
-  - 0.03352186709150322
-  - 0.0293778874003907
+  - 0.03454907933333041
+  - 0.03389085020353741
+  - 0.025581569431576093
+  - 0.03956795125275375
+  - 0.030881155720015187
+  - 0.033661746987124035
+  - 0.027513054841105652
+  - 0.03696870764317698
+  - 0.03639000225483849
+  - 0.03497450768795512
+  - 0.034962922926837475
+  - 0.0277200488449626
+  - 0.035022038458881424
+  - 0.05636473983688446
+  - 0.03704688761304954
+  - 0.03119623791335318
+  - 0.02757764572120049
   - 0.0
-  - 0.035425474201947395
-  - 0.023519025573666145
-  - 0.035335227526990524
-  - 0.03284804458889477
-  - 0.0414310157781098
-  - 0.03226382901551711
-  - 0.029600741888731158
-  - 0.03152381690811505
-  - 0.03182766504119841
-  - 0.03487253372166282
-  - 0.027051359675721084
-  - 0.0
-  - 0.02996166456000803
-  - 0.035417424074435315
-  - 0.033196322643321646
-  - 0.030234431213267146
-  - 0.0344245098588854
-  - 0.03611435751406118
-  - 0.03545886756515599
-  - 0.025725755679659748
-  - 0.03191935844599102
-  - 0.03656439127440524
-  - 0.027160803474691384
-  - 0.029101873401352805
-  - 0.030455794192117056
-  - 0.03174157614112913
-  - 0.036731370857180735
-  - 0.03467438364161423
-  - 0.042908329976746575
-  - 0.028574037947103965
-  - 0.03184513097087304
-  - 0.03047722054314167
-  - 0.03416474961131198
-  - 0.028479872970002207
-  - 0.030759489839234485
-  - 0.03403940978674128
-  - 0.027637729225122244
-  - 0.027206285645564442
+  - 0.03697028331067401
+  - 0.021245065644964346
+  - 0.03207150358876249
+  - 0.0329877796861381
+  - 0.03130142782624638
+  - 0.029411366319568685
+  - 0.03411400642530955
+  - 0.02883728594131405
+  - 0.03146854056681778
+  - 0.029602660363470944
+  - 0.027410607309248883
+  - 0.028496334768521082
+  - 0.0343824234664235
+  - 0.034118506846698315
+  - 0.029183616443755347
+  - 0.04441381645699944
+  - 0.03557637370088916
+  - 0.03594668341510836
+  - 0.028995144193555852
+  - 0.026738074325951496
+  - 0.03253495004388908
+  - 0.030374275343064253
+  - 0.025819834791791875
+  - 0.02599897524611783
+  - 0.037199553491570954
+  - 0.03044117662467814
+  - 0.026195921703474997
+  - 0.03130086830992821
+  - 0.03601657607196529
+  - 0.027857580246637648
+  - 0.03122841042319832
+  - 0.033341941296589614
   - 0.033736381430757925
 trials:
 - model: XGBClassifier()
   model__colsample_bylevel: 0.9416576386904312
   model__colsample_bytree: 0.6517050549420875
   model__learning_rate: 0.2541400145361314
-  model__max_depth: 7
+  model__max_depth: 13
   model__min_child_weight: 1
-  model__n_estimators: 363
+  model__n_estimators: 707
   model__reg_alpha: 0.0025962684183737316
   model__reg_lambda: 2.4140544277669678
   model__subsample: 0.9767400750948969
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.9593612608346885
@@ -211,847 +214,897 @@ trials:
   model__learning_rate: 0.04366013678619019
   model__max_depth: 2
   model__min_child_weight: 6
-  model__n_estimators: 395
+  model__n_estimators: 733
   model__reg_alpha: 0.10144020667237337
   model__reg_lambda: 2.1654709911636405
   model__subsample: 0.9866034888464443
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.5859357806982803
   model__colsample_bytree: 0.799023538756064
   model__learning_rate: 0.1533843042738779
-  model__max_depth: 3
+  model__max_depth: 5
   model__min_child_weight: 1
-  model__n_estimators: 1536
+  model__n_estimators: 1634
   model__reg_alpha: 0.30940078642444824
   model__reg_lambda: 3.5402659040014948
   model__subsample: 0.6933976321088419
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.7190145932204617
   model__colsample_bytree: 0.7633101185638462
   model__learning_rate: 0.11407625931280554
-  model__max_depth: 8
+  model__max_depth: 15
   model__min_child_weight: 17
-  model__n_estimators: 906
+  model__n_estimators: 1136
   model__reg_alpha: 0.03991502512609639
   model__reg_lambda: 1.6314646082653332
   model__subsample: 0.8297131143495482
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.9696848688013859
   model__colsample_bytree: 0.5818035893192751
   model__learning_rate: 0.018981345896813002
-  model__max_depth: 6
+  model__max_depth: 11
   model__min_child_weight: 4
-  model__n_estimators: 972
+  model__n_estimators: 1189
   model__reg_alpha: 0.01377401781906964
   model__reg_lambda: 2.9702160489961873
   model__subsample: 0.7787136018188425
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.8876821894139413
   model__colsample_bytree: 0.679511465960702
   model__learning_rate: 0.19565208359558597
-  model__max_depth: 4
+  model__max_depth: 6
   model__min_child_weight: 10
-  model__n_estimators: 1333
+  model__n_estimators: 1473
   model__reg_alpha: 0.004878994671461945
   model__reg_lambda: 2.765930623533157
   model__subsample: 0.8171497855716499
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.9600046132186582
   model__colsample_bytree: 0.7482333517983584
   model__learning_rate: 0.17271105113369045
-  model__max_depth: 2
+  model__max_depth: 3
   model__min_child_weight: 1
-  model__n_estimators: 1184
+  model__n_estimators: 1356
   model__reg_alpha: 0.00012682484500023283
   model__reg_lambda: 1.7069954134453618
   model__subsample: 0.9129729782239605
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.8503107223106829
   model__colsample_bytree: 0.9358259642316076
   model__learning_rate: 0.0411356312908673
-  model__max_depth: 2
+  model__max_depth: 3
   model__min_child_weight: 2
-  model__n_estimators: 100
+  model__n_estimators: 500
   model__reg_alpha: 0.003039078727520555
   model__reg_lambda: 2.27956386247516
   model__subsample: 0.5879532027938977
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.9089150098318758
   model__colsample_bytree: 0.8706413721840136
   model__learning_rate: 0.023768813596649976
-  model__max_depth: 4
+  model__max_depth: 6
   model__min_child_weight: 3
-  model__n_estimators: 694
+  model__n_estimators: 969
   model__reg_alpha: 0.0004077353327583254
   model__reg_lambda: 3.452583059483785
   model__subsample: 0.9066387322565819
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.6792407612866821
   model__colsample_bytree: 0.7432568991862594
   model__learning_rate: 0.05716271229635417
-  model__max_depth: 2
+  model__max_depth: 3
   model__min_child_weight: 17
-  model__n_estimators: 1305
+  model__n_estimators: 1451
   model__reg_alpha: 0.0006320944871423989
   model__reg_lambda: 3.445891590639741
   model__subsample: 0.8686528138205066
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.537511047508395
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.29999999999999993
+  model__max_depth: 4
+  model__min_child_weight: 13
+  model__n_estimators: 500
+  model__reg_alpha: 0.0003856500807146099
+  model__reg_lambda: 2.5279724704368545
+  model__subsample: 0.5454486371485905
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.6096966009096421
+  model__colsample_bytree: 0.5749897655312658
+  model__learning_rate: 0.01
+  model__max_depth: 13
+  model__min_child_weight: 2
+  model__n_estimators: 1843
+  model__reg_alpha: 0.03875969285830377
+  model__reg_lambda: 2.517381938691885
+  model__subsample: 0.9449427443821983
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.5
   model__colsample_bytree: 1.0
-  model__learning_rate: 0.033009194512808065
-  model__max_depth: 10
-  model__min_child_weight: 1
-  model__n_estimators: 2000
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 1.0
-  model__subsample: 0.6725793798611481
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.6364241173301697
-  model__learning_rate: 0.01
-  model__max_depth: 2
-  model__min_child_weight: 50
-  model__n_estimators: 100
-  model__reg_alpha: 0.003710537397693804
-  model__reg_lambda: 1.7768776058609033
-  model__subsample: 0.5656407719338608
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.6445544797203755
-  model__colsample_bytree: 0.5
-  model__learning_rate: 0.01
-  model__max_depth: 1
-  model__min_child_weight: 50
-  model__n_estimators: 2000
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.0
-  model__subsample: 0.9175946537574802
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 0.5
-  model__learning_rate: 0.29999999999999993
-  model__max_depth: 1
-  model__min_child_weight: 2
-  model__n_estimators: 2000
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 4.0
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 0.5
-  model__learning_rate: 0.01
-  model__max_depth: 1
+  model__learning_rate: 0.027526167278934133
+  model__max_depth: 4
   model__min_child_weight: 15
-  model__n_estimators: 217
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.9076475860424678
-  model__subsample: 0.8089472706252225
+  model__n_estimators: 879
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 1.0
+  model__subsample: 0.7143847120441421
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.8452167140417423
+  model__colsample_bytree: 0.9497403768827932
+  model__learning_rate: 0.029933818153916405
+  model__max_depth: 9
+  model__min_child_weight: 45
+  model__n_estimators: 1100
+  model__reg_alpha: 0.13155900873667056
+  model__reg_lambda: 1.9130567572732646
+  model__subsample: 0.562631959923916
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.5
-  model__learning_rate: 0.026234926742598745
-  model__max_depth: 10
-  model__min_child_weight: 50
-  model__n_estimators: 100
-  model__reg_alpha: 1.0
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.01
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 500
+  model__reg_alpha: 0.0001
   model__reg_lambda: 1.0
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.01
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 1619
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 3.626657542132231
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 1.0
   model__colsample_bytree: 0.5
-  model__learning_rate: 0.05133403405938396
+  model__learning_rate: 0.01
   model__max_depth: 1
-  model__min_child_weight: 50
-  model__n_estimators: 2000
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 4.0
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.7881427706008353
-  model__colsample_bytree: 1.0
-  model__learning_rate: 0.023102803512264913
-  model__max_depth: 10
-  model__min_child_weight: 10
-  model__n_estimators: 2000
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 1.0
-  model__subsample: 0.8464803217466044
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.979481021042037
-  model__learning_rate: 0.08529030669954217
-  model__max_depth: 7
-  model__min_child_weight: 7
+  model__min_child_weight: 1
   model__n_estimators: 2000
   model__reg_alpha: 1.0
   model__reg_lambda: 4.0
-  model__subsample: 0.6740547850101766
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 1.0
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.01
+  model__max_depth: 1
+  model__min_child_weight: 50
+  model__n_estimators: 500
+  model__reg_alpha: 1.0
+  model__reg_lambda: 1.0
+  model__subsample: 0.5
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
+  model__colsample_bylevel: 0.539912602069408
+  model__colsample_bytree: 0.5565345632953189
   model__learning_rate: 0.01
   model__max_depth: 1
-  model__min_child_weight: 1
-  model__n_estimators: 1275
-  model__reg_alpha: 0.003357053088564055
-  model__reg_lambda: 1.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.9673716106432835
-  model__learning_rate: 0.19612018526654218
-  model__max_depth: 1
-  model__min_child_weight: 10
-  model__n_estimators: 100
-  model__reg_alpha: 0.0784531384009254
-  model__reg_lambda: 1.0
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.5
-  model__learning_rate: 0.01
-  model__max_depth: 10
-  model__min_child_weight: 3
-  model__n_estimators: 100
-  model__reg_alpha: 1.0
-  model__reg_lambda: 4.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.7878453634284058
-  model__colsample_bytree: 0.9070251609805744
-  model__learning_rate: 0.19071447149505222
-  model__max_depth: 1
-  model__min_child_weight: 12
-  model__n_estimators: 1800
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 1.280309079893382
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
-  model__learning_rate: 0.04165320043006762
-  model__max_depth: 10
   model__min_child_weight: 50
-  model__n_estimators: 1069
-  model__reg_alpha: 0.1076682573271231
-  model__reg_lambda: 1.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.8033853544220639
-  model__learning_rate: 0.01
-  model__max_depth: 1
-  model__min_child_weight: 17
-  model__n_estimators: 100
-  model__reg_alpha: 1.0
+  model__n_estimators: 1973
+  model__reg_alpha: 0.0001
   model__reg_lambda: 4.0
-  model__subsample: 0.9838160345431992
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  model__subsample: 0.8431158132425208
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.5
   model__colsample_bytree: 0.5
-  model__learning_rate: 0.01
-  model__max_depth: 10
-  model__min_child_weight: 1
-  model__n_estimators: 100
-  model__reg_alpha: 1.0
-  model__reg_lambda: 4.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.5
-  model__learning_rate: 0.01
-  model__max_depth: 10
-  model__min_child_weight: 1
-  model__n_estimators: 100
-  model__reg_alpha: 1.0
-  model__reg_lambda: 4.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.9551225727327968
-  model__learning_rate: 0.01
-  model__max_depth: 1
-  model__min_child_weight: 2
-  model__n_estimators: 2000
-  model__reg_alpha: 1.0
-  model__reg_lambda: 4.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.5576229264815686
-  model__learning_rate: 0.01
-  model__max_depth: 10
-  model__min_child_weight: 3
-  model__n_estimators: 100
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.0
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.5
-  model__learning_rate: 0.01
-  model__max_depth: 10
-  model__min_child_weight: 2
-  model__n_estimators: 100
-  model__reg_alpha: 1.0
-  model__reg_lambda: 4.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.520905468469525
-  model__colsample_bytree: 0.7750811574842531
-  model__learning_rate: 0.01
-  model__max_depth: 2
-  model__min_child_weight: 3
-  model__n_estimators: 467
-  model__reg_alpha: 1.0
-  model__reg_lambda: 4.0
-  model__subsample: 0.6314410792089402
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
   model__learning_rate: 0.29999999999999993
   model__max_depth: 1
-  model__min_child_weight: 1
+  model__min_child_weight: 4
   model__n_estimators: 2000
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 4.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.9722328096468622
-  model__colsample_bytree: 0.9110139567655051
-  model__learning_rate: 0.01
-  model__max_depth: 2
-  model__min_child_weight: 1
-  model__n_estimators: 1972
-  model__reg_alpha: 1.0
-  model__reg_lambda: 3.322941960122961
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.8103092924509482
-  model__colsample_bytree: 0.794907185571561
-  model__learning_rate: 0.01
-  model__max_depth: 10
-  model__min_child_weight: 2
-  model__n_estimators: 266
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.0
-  model__subsample: 0.5563725517380863
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.8350968435516005
-  model__colsample_bytree: 0.8542397709493273
-  model__learning_rate: 0.01
-  model__max_depth: 7
-  model__min_child_weight: 11
-  model__n_estimators: 1105
-  model__reg_alpha: 0.9421835083104838
-  model__reg_lambda: 1.3189970775580144
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
-  model__learning_rate: 0.01
-  model__max_depth: 1
-  model__min_child_weight: 3
-  model__n_estimators: 2000
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 1.97350688614642
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
-  model__learning_rate: 0.01
-  model__max_depth: 1
-  model__min_child_weight: 2
-  model__n_estimators: 1930
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.0
-  model__subsample: 0.8300090579393286
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 1.0
-  model__learning_rate: 0.01
-  model__max_depth: 2
-  model__min_child_weight: 2
-  model__n_estimators: 1281
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 1.08455624365623
-  model__subsample: 0.5985257607241216
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 0.5
-  model__learning_rate: 0.01
-  model__max_depth: 1
-  model__min_child_weight: 1
-  model__n_estimators: 100
-  model__reg_alpha: 0.00020404514712388773
-  model__reg_lambda: 1.9440494281137106
-  model__subsample: 0.592116889340326
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.9726847413757067
-  model__learning_rate: 0.01
-  model__max_depth: 5
-  model__min_child_weight: 2
-  model__n_estimators: 538
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.0
-  model__subsample: 0.7022307385165211
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.6384445541039933
-  model__colsample_bytree: 0.7238164328629626
-  model__learning_rate: 0.29999999999999993
-  model__max_depth: 3
-  model__min_child_weight: 3
-  model__n_estimators: 1661
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
-  model__learning_rate: 0.01
-  model__max_depth: 10
-  model__min_child_weight: 2
-  model__n_estimators: 1324
   model__reg_alpha: 1.0
   model__reg_lambda: 4.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  model__subsample: 0.9092926725063736
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.8733599043763044
-  model__learning_rate: 0.01
-  model__max_depth: 5
-  model__min_child_weight: 2
-  model__n_estimators: 1627
-  model__reg_alpha: 1.0
-  model__reg_lambda: 4.0
-  model__subsample: 0.8448450674014508
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
-  model__learning_rate: 0.04443787895926853
-  model__max_depth: 1
-  model__min_child_weight: 2
-  model__n_estimators: 338
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.0
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
-  model__learning_rate: 0.01
-  model__max_depth: 1
-  model__min_child_weight: 2
-  model__n_estimators: 930
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 1.0
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 0.5
-  model__learning_rate: 0.01
-  model__max_depth: 3
-  model__min_child_weight: 2
-  model__n_estimators: 1569
-  model__reg_alpha: 0.0001
-  model__reg_lambda: 1.0
-  model__subsample: 0.5
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: None
-- model: XGBClassifier()
-  model__colsample_bylevel: 0.5
-  model__colsample_bytree: 1.0
+  model__colsample_bytree: 0.8688584042595455
   model__learning_rate: 0.01
   model__max_depth: 1
   model__min_child_weight: 4
-  model__n_estimators: 100
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.0
-  model__subsample: 1.0
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  model__n_estimators: 2000
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 4.0
+  model__subsample: 0.7219633403105301
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 0.8509659433424821
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.5
   model__learning_rate: 0.01
-  model__max_depth: 1
-  model__min_child_weight: 10
-  model__n_estimators: 1463
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.0
+  model__max_depth: 8
+  model__min_child_weight: 42
+  model__n_estimators: 1927
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 4.0
   model__subsample: 1.0
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.6336897599252337
   model__learning_rate: 0.01
-  model__max_depth: 2
-  model__min_child_weight: 2
-  model__n_estimators: 1720
-  model__reg_alpha: 1.0
-  model__reg_lambda: 1.9978280879872852
-  model__subsample: 0.7546441450757377
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  model__max_depth: 4
+  model__min_child_weight: 3
+  model__n_estimators: 2000
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 4.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
-  model__colsample_bylevel: 1.0
-  model__colsample_bytree: 1.0
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.6244076671123087
   model__learning_rate: 0.01
   model__max_depth: 1
   model__min_child_weight: 5
   model__n_estimators: 2000
-  model__reg_alpha: 0.0001343086557913009
-  model__reg_lambda: 1.6614429521459078
+  model__reg_alpha: 1.0
+  model__reg_lambda: 4.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.8714415735183566
+  model__colsample_bytree: 0.9088756876228776
+  model__learning_rate: 0.01868429948293249
+  model__max_depth: 3
+  model__min_child_weight: 19
+  model__n_estimators: 1003
+  model__reg_alpha: 0.015813392675534613
+  model__reg_lambda: 1.3730863279652876
+  model__subsample: 0.5562464140138486
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.01
+  model__max_depth: 1
+  model__min_child_weight: 2
+  model__n_estimators: 1478
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 2.2157690792598435
+  model__subsample: 0.5757176764185551
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.9092544988961605
+  model__learning_rate: 0.01
+  model__max_depth: 1
+  model__min_child_weight: 20
+  model__n_estimators: 1395
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 2.1314453159784628
+  model__subsample: 0.5386256208119565
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.6194672367862892
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.01
+  model__max_depth: 20
+  model__min_child_weight: 1
+  model__n_estimators: 1541
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 1.0
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.01
+  model__max_depth: 14
+  model__min_child_weight: 1
+  model__n_estimators: 1545
+  model__reg_alpha: 0.006103615889858539
+  model__reg_lambda: 1.0
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.7782595848366091
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.01
+  model__max_depth: 4
+  model__min_child_weight: 6
+  model__n_estimators: 2000
+  model__reg_alpha: 1.0
+  model__reg_lambda: 4.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.29999999999999993
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 500
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 1.0
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.9214386794570255
+  model__colsample_bytree: 0.7319420905514253
+  model__learning_rate: 0.12772792632515595
+  model__max_depth: 2
+  model__min_child_weight: 44
+  model__n_estimators: 1751
+  model__reg_alpha: 0.3801561163301732
+  model__reg_lambda: 2.6931862845008774
+  model__subsample: 0.9388032717576125
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.01
+  model__max_depth: 1
+  model__min_child_weight: 3
+  model__n_estimators: 1109
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 2.5812761268973734
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.29999999999999993
+  model__max_depth: 20
+  model__min_child_weight: 11
+  model__n_estimators: 2000
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 1.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.01
+  model__max_depth: 1
+  model__min_child_weight: 3
+  model__n_estimators: 500
+  model__reg_alpha: 0.00015720456566070427
+  model__reg_lambda: 1.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.5885589448559904
+  model__learning_rate: 0.01178514475116296
+  model__max_depth: 2
+  model__min_child_weight: 15
+  model__n_estimators: 2000
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 4.0
+  model__subsample: 0.7553332809343332
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.8008569806228365
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.29999999999999993
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 1433
+  model__reg_alpha: 0.0017198586692102433
+  model__reg_lambda: 4.0
+  model__subsample: 0.8001186380501546
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.026510174188999334
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 1247
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 4.0
+  model__subsample: 0.5592553635941685
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.010558324610465934
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 2000
+  model__reg_alpha: 0.011785912486947195
+  model__reg_lambda: 4.0
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.8294892229930133
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.021818935564381844
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 861
+  model__reg_alpha: 0.00017148983438746132
+  model__reg_lambda: 4.0
+  model__subsample: 0.808213351018029
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.8365809151882473
+  model__learning_rate: 0.04925011355449809
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 1492
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 4.0
   model__subsample: 0.5
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.9206874795706091
+  model__colsample_bytree: 0.8803477320684507
+  model__learning_rate: 0.024762783457222364
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 2000
+  model__reg_alpha: 1.0
+  model__reg_lambda: 4.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.7361793672716599
+  model__colsample_bytree: 0.8002299738599956
+  model__learning_rate: 0.29999999999999993
+  model__max_depth: 4
+  model__min_child_weight: 2
+  model__n_estimators: 2000
+  model__reg_alpha: 0.19047070252845122
+  model__reg_lambda: 4.0
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5024418030816197
+  model__colsample_bytree: 0.5261673908373672
+  model__learning_rate: 0.01
+  model__max_depth: 1
+  model__min_child_weight: 17
+  model__n_estimators: 947
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 4.0
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 1.0
+  model__colsample_bytree: 0.5
+  model__learning_rate: 0.29999999999999993
+  model__max_depth: 1
+  model__min_child_weight: 1
+  model__n_estimators: 2000
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 4.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.29999999999999993
+  model__max_depth: 6
+  model__min_child_weight: 50
+  model__n_estimators: 564
+  model__reg_alpha: 0.0001
+  model__reg_lambda: 4.0
+  model__subsample: 1.0
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.9655989962354828
+  model__colsample_bytree: 0.7066898646804521
+  model__learning_rate: 0.0163890455694807
+  model__max_depth: 20
+  model__min_child_weight: 11
+  model__n_estimators: 1446
+  model__reg_alpha: 0.0004467162846213329
+  model__reg_lambda: 4.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.023653459115961572
+  model__max_depth: 1
+  model__min_child_weight: 2
+  model__n_estimators: 2000
+  model__reg_alpha: 1.0
+  model__reg_lambda: 4.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 0.9951640055720512
+  model__learning_rate: 0.02457248308221241
+  model__max_depth: 20
+  model__min_child_weight: 1
+  model__n_estimators: 2000
+  model__reg_alpha: 1.0
+  model__reg_lambda: 4.0
+  model__subsample: 0.5
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: None
+- model: XGBClassifier()
+  model__colsample_bylevel: 0.5
+  model__colsample_bytree: 1.0
+  model__learning_rate: 0.05315850815253501
+  model__max_depth: 1
+  model__min_child_weight: 24
+  model__n_estimators: 1794
+  model__reg_alpha: 1.0
+  model__reg_lambda: 4.0
+  model__subsample: 0.8200417740802965
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 - model: XGBClassifier()
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: None
 timings:
   fit time averages:
-  - 0.40660481452941893
-  - 0.1622934579849243
-  - 1.3576101541519165
-  - 0.5140552043914794
-  - 0.797977614402771
-  - 0.7636099815368652
-  - 1.0328442335128785
-  - 0.06178059577941895
-  - 0.5771713018417358
-  - 0.9285252809524536
-  - 3.3750119686126707
-  - 0.04789760112762451
-  - 0.44939093589782714
-  - 0.8317705869674683
-  - 0.07679648399353027
-  - 0.04582877159118652
-  - 0.7879037380218505
-  - 3.307118368148804
-  - 2.108428478240967
-  - 0.46273553371429443
-  - 0.05399610996246338
-  - 0.08985068798065185
-  - 0.8489231586456298
-  - 0.3563560485839844
-  - 0.050255537033081055
-  - 0.11365940570831298
-  - 0.11321606636047363
-  - 0.541345477104187
-  - 0.09689216613769532
-  - 0.07368121147155762
-  - 0.1718531370162964
-  - 0.6474470615386962
-  - 1.7511469364166259
-  - 0.3060544490814209
-  - 2.2632571697235107
-  - 0.743055772781372
-  - 0.6984511613845825
-  - 0.531589126586914
-  - 0.0468346118927002
-  - 0.44802150726318357
-  - 0.7288867712020874
-  - 3.514047074317932
-  - 1.2884360313415528
-  - 0.2666341304779053
-  - 0.3453407287597656
-  - 0.6384634494781494
-  - 0.054555654525756836
-  - 0.47629032135009763
-  - 1.8748547315597535
-  - 0.7127562522888183
-  - 1.3242220401763916
+  - 0.6739184141159058
+  - 0.3826411724090576
+  - 2.157639718055725
+  - 0.5327802181243897
+  - 1.017801547050476
+  - 0.7303081274032592
+  - 1.6110806703567504
+  - 0.3647990942001343
+  - 1.069846224784851
+  - 1.3116215467453003
+  - 0.48639185428619386
+  - 3.7534260511398316
+  - 1.0699667930603027
+  - 0.3575287342071533
+  - 0.24603102207183838
+  - 0.4837040901184082
+  - 0.5342737197875976
+  - 0.309377121925354
+  - 0.434516453742981
+  - 0.4317445993423462
+  - 0.5442902088165283
+  - 0.46309537887573243
+  - 0.9587110280990601
+  - 0.5223156452178955
+  - 0.5426209449768067
+  - 0.6204945325851441
+  - 0.56822509765625
+  - 3.465084409713745
+  - 3.0079137086868286
+  - 1.7968418836593627
+  - 0.17684364318847656
+  - 1.2809231281280518
+  - 0.5341273784637451
+  - 0.9781126260757447
+  - 0.21662774085998535
+  - 0.6795778512954712
+  - 0.627633786201477
+  - 0.5173710107803344
+  - 0.5401119947433471
+  - 0.4228726625442505
+  - 0.43026957511901853
+  - 0.6582237243652344
+  - 1.4851980686187745
+  - 0.3193559408187866
+  - 0.5198519945144653
+  - 0.2227259635925293
+  - 0.7868085622787475
+  - 0.7078078031539917
+  - 1.9864389181137085
+  - 0.4744961023330688
+  - 1.220662236213684
   fit time standard deviations:
-  - 0.081446731850316
-  - 0.014354066503410343
-  - 0.20584257209125686
-  - 0.1037814691081851
-  - 0.0975299429799533
-  - 0.1413823177837125
-  - 0.18717240058321655
-  - 0.005766902147236154
-  - 0.0894571644920969
-  - 0.16581669042483718
-  - 0.5017156922198953
-  - 0.009561929326694177
-  - 0.061052417834918736
-  - 0.12408697481483583
-  - 0.009256466505809054
-  - 0.00850403861495203
-  - 0.11757205482925749
-  - 0.45092200798979676
-  - 0.3028504734213778
-  - 0.06651826315818532
-  - 0.012413352447182661
-  - 0.017694790606109605
-  - 0.12302047452490908
-  - 0.03626123908035277
-  - 0.007098509284571091
-  - 0.02943802171967377
-  - 0.010763743870494363
-  - 0.07605158831407098
-  - 0.013431400176972433
-  - 0.00643784122430807
-  - 0.0188851319020508
-  - 0.08507425305914415
-  - 0.26671172018490263
-  - 0.03981032368214081
-  - 0.29441794138768723
-  - 0.11766846101931747
-  - 0.09962020169584644
-  - 0.09132751380043434
-  - 0.006257503270609455
-  - 0.053434072337330996
-  - 0.10264909204389422
-  - 0.48702842461863144
-  - 0.1919228282624705
-  - 0.05352839853395502
-  - 0.05069903005122261
-  - 0.101661911085622
-  - 0.012213136497112255
-  - 0.029820440748944164
-  - 0.2908150372260848
-  - 0.10571587265987517
-  - 0.21155635762837052
+  - 0.12623292565423888
+  - 0.08771835358411816
+  - 0.37139202029859775
+  - 0.06950494466595578
+  - 0.14393652657175662
+  - 0.10399526552696718
+  - 0.23870393796277234
+  - 0.05819169205611118
+  - 0.1413199656727323
+  - 0.21410801318131267
+  - 0.07420542240694362
+  - 0.5944170071683882
+  - 0.1994751394093385
+  - 0.05261084430587468
+  - 0.04230069738672354
+  - 0.08316436627770561
+  - 0.08286839918988864
+  - 0.042892787567937594
+  - 0.071879955047425
+  - 0.048394643897030847
+  - 0.07913903765693547
+  - 0.07686548010841038
+  - 0.14823863680120636
+  - 0.09148549953958539
+  - 0.06180818701979991
+  - 0.13435841785434552
+  - 0.0849223599398431
+  - 0.5471893648218253
+  - 0.4588194199641315
+  - 0.2660831902689804
+  - 0.01644479759697804
+  - 0.19559915292874278
+  - 0.0997529162176204
+  - 0.15763562126151567
+  - 0.050204313903155426
+  - 0.1225382741932473
+  - 0.0913536245803567
+  - 0.09845037042250147
+  - 0.09297077159723355
+  - 0.07771163464468885
+  - 0.06714457901904702
+  - 0.10362869334124371
+  - 0.24210189767905826
+  - 0.052918581901070884
+  - 0.07174407293628507
+  - 0.036946739090947915
+  - 0.10260649676253397
+  - 0.17318464381961027
+  - 0.32654848876376197
+  - 0.06877419593730301
+  - 0.19021192779769225
   score time averages:
-  - 0.04261670112609863
-  - 0.019204068183898925
-  - 0.02280845642089844
-  - 0.019948291778564452
-  - 0.028227686882019043
-  - 0.026688480377197267
-  - 0.01199641227722168
-  - 0.014469504356384277
-  - 0.01848313808441162
-  - 0.009267163276672364
-  - 0.03175804615020752
-  - 0.010265469551086426
-  - 0.021807646751403807
-  - 0.013519215583801269
-  - 0.017307138442993163
-  - 0.015636515617370606
-  - 0.01076662540435791
-  - 0.02960801124572754
-  - 0.029762744903564453
-  - 0.02936081886291504
-  - 0.008242559432983399
-  - 0.0218792200088501
-  - 0.009872817993164062
-  - 0.01788182258605957
-  - 0.010523724555969238
-  - 0.025699949264526366
-  - 0.009019231796264649
-  - 0.03525023460388184
-  - 0.02111392021179199
-  - 0.016523861885070802
-  - 0.024724507331848146
-  - 0.021666407585144043
-  - 0.031740212440490724
-  - 0.024004793167114256
-  - 0.03420932292938232
-  - 0.026923632621765135
-  - 0.02220027446746826
-  - 0.02500026226043701
-  - 0.016418957710266115
-  - 0.023364686965942384
-  - 0.02992415428161621
-  - 0.023023176193237304
-  - 0.04196794033050537
-  - 0.017128562927246092
-  - 0.0364722728729248
-  - 0.025798726081848144
-  - 0.007045149803161621
-  - 0.03415250778198242
-  - 0.014940953254699707
-  - 0.02680964469909668
-  - 0.019368624687194823
+  - 0.028426289558410645
+  - 0.021158504486083984
+  - 0.022129249572753907
+  - 0.017740797996520997
+  - 0.02765676975250244
+  - 0.02836301326751709
+  - 0.012104105949401856
+  - 0.026017284393310545
+  - 0.027853512763977052
+  - 0.016878366470336914
+  - 0.014713025093078614
+  - 0.056459879875183104
+  - 0.015271925926208496
+  - 0.022324967384338378
+  - 0.01123824119567871
+  - 0.025636863708496094
+  - 0.021715879440307617
+  - 0.00978846549987793
+  - 0.019034957885742186
+  - 0.020960354804992677
+  - 0.027934503555297852
+  - 0.021278190612792968
+  - 0.028621983528137208
+  - 0.03886406421661377
+  - 0.03080716133117676
+  - 0.02025163173675537
+  - 0.009259438514709473
+  - 0.05668418407440186
+  - 0.057508540153503415
+  - 0.020196080207824707
+  - 0.026746177673339845
+  - 0.026579618453979492
+  - 0.02214095592498779
+  - 0.022688126564025878
+  - 0.028717613220214842
+  - 0.027962875366210938
+  - 0.013166427612304688
+  - 0.011571025848388672
+  - 0.03092648983001709
+  - 0.017764735221862792
+  - 0.02592306137084961
+  - 0.02978239059448242
+  - 0.014925527572631835
+  - 0.00932154655456543
+  - 0.017861533164978027
+  - 0.023914170265197755
+  - 0.024989724159240723
+  - 0.02315826416015625
+  - 0.06655580997467041
+  - 0.02777376174926758
+  - 0.009454751014709472
   score time standard deviations:
-  - 0.023483989739810317
-  - 0.006200694058090199
-  - 0.008844748675371914
-  - 0.005384678587067707
-  - 0.0029757489858136432
-  - 0.008803937146566049
-  - 0.005122427298073886
-  - 0.004754504256396104
-  - 0.0038837572676003753
-  - 0.0036565614128839267
-  - 0.009000944074488667
-  - 0.00528750516204736
-  - 0.008882907623259469
-  - 0.006359385717257076
-  - 0.0032438703569413656
-  - 0.0048227604443666205
-  - 0.004766571333620451
-  - 0.011946713323408931
-  - 0.011248848716727938
-  - 0.018038615971567983
-  - 0.003165421447582921
-  - 0.009974909846654948
-  - 0.00364709545585549
-  - 0.005955032331686522
-  - 0.0036286321140523163
-  - 0.011354854556039178
-  - 0.0030001557946732456
-  - 0.0159882479608808
-  - 0.007058238368673395
-  - 0.004410727163812159
-  - 0.0194978478125708
-  - 0.00770849074505818
-  - 0.016156668678733242
-  - 0.011231448290688133
-  - 0.017993380555106953
-  - 0.010866160876989274
-  - 0.007042525403538965
-  - 0.009435686760024988
-  - 0.005811009832710063
-  - 0.006578950550457908
-  - 0.013668671438384813
-  - 0.003529312555059412
-  - 0.016038854465339713
-  - 0.0078035548911492515
-  - 0.017688926811811598
-  - 0.00971175515964589
-  - 0.0025676748933807438
-  - 0.007718129122107187
-  - 0.0038030696586113188
-  - 0.009910547027069283
-  - 0.012819594132104987
+  - 0.012938484071845759
+  - 0.0064400677731880455
+  - 0.007110091503021072
+  - 0.003205173002906049
+  - 0.009367419384040477
+  - 0.01050367800174774
+  - 0.0052262238857509165
+  - 0.011199502690828684
+  - 0.009840008702203076
+  - 0.00657662805497232
+  - 0.006722005139296885
+  - 0.014211232644355603
+  - 0.00505769442401514
+  - 0.007334014585908945
+  - 0.00669268393845743
+  - 0.011533878507350753
+  - 0.006079037818184902
+  - 0.0048044426641625955
+  - 0.009197271943191634
+  - 0.007618108289728226
+  - 0.011033842347400324
+  - 0.007758215742239329
+  - 0.008062943782586988
+  - 0.02153310050342177
+  - 0.014267475944265477
+  - 0.010793612830134258
+  - 0.00309471635547708
+  - 0.01526736507590822
+  - 0.022133548757556756
+  - 0.0060522631491031495
+  - 0.012319713684797317
+  - 0.015616361419200512
+  - 0.01694547046240136
+  - 0.018828268275914873
+  - 0.009232573115276227
+  - 0.011768009999369842
+  - 0.005376074841560685
+  - 0.006390899122485378
+  - 0.01496999777480769
+  - 0.01187835042473371
+  - 0.014903428886210322
+  - 0.012134485021587408
+  - 0.008633488983837196
+  - 0.004870497735244151
+  - 0.004288556516194725
+  - 0.010826574648791734
+  - 0.005632698843147914
+  - 0.008631654017091001
+  - 0.025286639204961416
+  - 0.013030524403035955
+  - 0.002997884681806392

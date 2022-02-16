@@ -9,633 +9,686 @@ parameter_names:
 - model__C
 - prep__numeric__imputer__transformer
 - prep__numeric__scaler__transformer
+- prep__numeric__pca__transformer
 - prep__non_numeric__encoder__transformer
 parameter_names_mapping:
   model: model
   model__C: C
   prep__numeric__imputer__transformer: imputer
   prep__numeric__scaler__transformer: scaler
+  prep__numeric__pca__transformer: pca
   prep__non_numeric__encoder__transformer: encoder
 test_score_rankings:
   roc_auc:
-  - 30
-  - 32
-  - 50
-  - 49
   - 33
-  - 23
-  - 31
-  - 41
-  - 42
   - 36
-  - 13
-  - 26
-  - 24
-  - 38
-  - 19
   - 47
-  - 44
-  - 16
-  - 15
-  - 17
-  - 12
+  - 49
+  - 34
   - 28
+  - 35
+  - 42
+  - 44
+  - 29
+  - 32
+  - 38
+  - 31
+  - 17
+  - 27
+  - 22
+  - 40
   - 14
-  - 11
-  - 20
-  - 10
-  - 39
-  - 45
+  - 21
+  - 9
+  - 8
+  - 43
   - 9
   - 51
+  - 6
+  - 41
   - 46
-  - 8
-  - 5
-  - 5
-  - 4
-  - 40
-  - 37
-  - 7
-  - 48
-  - 35
-  - 18
-  - 43
-  - 25
-  - 22
   - 3
-  - 26
-  - 34
+  - 4
   - 1
-  - 29
+  - 48
+  - 7
+  - 30
+  - 45
   - 2
-  - 21
+  - 5
+  - 15
+  - 37
+  - 39
+  - 24
+  - 25
+  - 23
+  - 20
+  - 50
+  - 19
+  - 16
+  - 18
+  - 11
+  - 11
+  - 11
+  - 26
 test_score_averages:
   roc_auc:
-  - 0.746886813283159
+  - 0.7487047876689911
   - 0.7448773307781426
-  - 0.6994736174939888
-  - 0.7086459949164104
-  - 0.7440522779765948
-  - 0.7563426566560819
+  - 0.7221927900390006
+  - 0.70854127559358
+  - 0.7456109867577104
+  - 0.7564622765812302
   - 0.7449528296498859
   - 0.7262806605116614
-  - 0.7252844428644029
-  - 0.7340792940816622
-  - 0.7652254818707599
-  - 0.7553233097349754
-  - 0.755627884337801
+  - 0.72477716304575
+  - 0.7558131264626066
+  - 0.755169553160269
+  - 0.7421530678450122
+  - 0.7552351544801481
+  - 0.7707228878383242
+  - 0.7565111977937009
+  - 0.7641958735089267
+  - 0.7299638304394795
+  - 0.7707246136045028
+  - 0.7702529270000726
+  - 0.7707436339085795
+  - 0.7707632263850686
+  - 0.7249378995570893
+  - 0.7707436339085795
+  - 0.6992344988053277
+  - 0.7707832063889755
   - 0.7293247876519405
-  - 0.7621039992770543
+  - 0.7239648401405894
+  - 0.7708043973192573
+  - 0.7707996633217332
+  - 0.7708171336222225
   - 0.72157587457158
-  - 0.724719610453602
-  - 0.7642915169753851
-  - 0.764484712655849
-  - 0.7642595995222236
-  - 0.7653740663281701
-  - 0.7550950205847097
-  - 0.7652061268104358
-  - 0.7682581415316825
-  - 0.7598313760911786
-  - 0.7695409456771551
-  - 0.7284756454115179
-  - 0.7245448324391994
-  - 0.7695414587076249
-  - 0.6992319811323707
-  - 0.7221745817041682
-  - 0.7696091290527324
-  - 0.7697246327171192
-  - 0.7697246327171192
-  - 0.7698295148280783
-  - 0.7282695203775209
-  - 0.7328606866097532
-  - 0.7696299623860657
-  - 0.7200873468284053
-  - 0.7421024240740206
-  - 0.7623144438027949
-  - 0.7252100495985995
-  - 0.755410316147898
-  - 0.757168308624451
-  - 0.7700563672331879
-  - 0.7553233097349754
-  - 0.7424670831928368
-  - 0.7700573739011715
-  - 0.7507299987254793
-  - 0.7700568839190055
+  - 0.7707821930212441
+  - 0.7552562060923401
+  - 0.7246050191875366
+  - 0.7708049559005934
+  - 0.7707832327611113
+  - 0.7707241756240504
+  - 0.743421241389628
+  - 0.730882907217181
+  - 0.761838039424344
+  - 0.7611715140669661
+  - 0.7634054674682871
+  - 0.7705740343915423
+  - 0.7000384498160768
+  - 0.770663597896437
+  - 0.7707240043864582
+  - 0.7707219998989167
+  - 0.7707394701994057
+  - 0.7707394701994057
+  - 0.7707394701994057
   - 0.757372239150702
 test_score_standard_deviations:
   roc_auc:
-  - 0.02400856270034789
+  - 0.024108174760927397
   - 0.02377537418496186
-  - 0.03438891196960671
-  - 0.03121758317881522
-  - 0.02382636511192029
-  - 0.030200468198318592
+  - 0.03072189338389531
+  - 0.03104750429042877
+  - 0.02411511504589964
+  - 0.03029915611293328
   - 0.023458784129588378
   - 0.02497457720123307
-  - 0.024835693194092047
-  - 0.041431527719742484
-  - 0.041553360066062126
-  - 0.039868867054362864
-  - 0.03985585764157044
+  - 0.022528578822881715
+  - 0.03986210181888033
+  - 0.03981095983379731
+  - 0.02380904069229867
+  - 0.039796731545674514
+  - 0.02836931456565643
+  - 0.04025126209414689
+  - 0.042510302217052875
+  - 0.04345595119458795
+  - 0.028004149244037362
+  - 0.026975816526158027
+  - 0.027959282128568956
+  - 0.02796471495480064
+  - 0.02539869287551014
+  - 0.027959282128568956
+  - 0.034136209534040354
+  - 0.02783589491892364
   - 0.0434943872156838
-  - 0.042118964658243614
+  - 0.02459444974617637
+  - 0.027818648083785497
+  - 0.02790185926478712
+  - 0.02790562114484226
   - 0.03160257388971555
-  - 0.025420954850250935
-  - 0.04023330847450275
-  - 0.04098560318998803
-  - 0.040683379486456964
-  - 0.04178346284541981
-  - 0.03980376118887563
-  - 0.041616223929451475
-  - 0.027657045072822916
-  - 0.028229016805866883
-  - 0.027091362560393156
-  - 0.02848796552436592
-  - 0.025117750320122822
-  - 0.027113616707509232
-  - 0.034106497279154366
-  - 0.031432842098003795
-  - 0.026830676088360594
-  - 0.026842467402276582
-  - 0.026842467402276582
-  - 0.026817982262425374
-  - 0.04333245415591028
-  - 0.02617218201315501
-  - 0.02684318188227061
-  - 0.0292018901846101
-  - 0.023638930872152984
-  - 0.0305273344367745
-  - 0.025578715315542094
-  - 0.03989978540957809
-  - 0.04099649641207136
-  - 0.027520269656500337
-  - 0.039868867054362864
-  - 0.023874101951174106
-  - 0.027544570211793924
-  - 0.02428185485586041
-  - 0.027514524885391203
+  - 0.027898195339299128
+  - 0.03980284857129273
+  - 0.025117180173297154
+  - 0.028095048616743733
+  - 0.027975697697705245
+  - 0.02800662800450305
+  - 0.03795891712668784
+  - 0.026580054904924346
+  - 0.04204848270491181
+  - 0.02865944248628349
+  - 0.038403941273481
+  - 0.02811616476028556
+  - 0.033994004277101426
+  - 0.02798821861047288
+  - 0.028028963817091464
+  - 0.028015650016802774
+  - 0.02801890039559388
+  - 0.02801890039559388
+  - 0.02801890039559388
   - 0.027027339000759727
 trials:
 - model: LogisticRegression()
   model__C: 11.655266791092009
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: MinMaxScaler()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
   model__C: 22.375882528244357
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
   model__C: 2.3712235042499274e-05
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: MinMaxScaler()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
   model__C: 0.0031932541960563612
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
   model__C: 32.730896501169475
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
   model__C: 1.5955669452672732
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
   model__C: 22.91257035436645
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
   model__C: 0.402690660245868
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
   model__C: 3.4885114865499216
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
-  prep__numeric__scaler__transformer: MinMaxScaler()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
   model__C: 0.0007376531147826206
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
-  prep__numeric__scaler__transformer: StandardScaler()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
-  model__C: 0.0969676529888354
+  model__C: 1.057922986323813e-06
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model: LogisticRegression()
+  model__C: 95.79451742509437
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
   model__C: 1.0e-06
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
-  model__C: 0.0005943395411162699
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model: LogisticRegression()
-  model__C: 1.0e-06
+  model__C: 0.043039061179239994
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 0.024089653402881134
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model: LogisticRegression()
-  model__C: 1.0003156212472004e-06
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model: LogisticRegression()
-  model__C: 99.37665442733785
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='median')
-  prep__numeric__scaler__transformer: StandardScaler()
-- model: LogisticRegression()
-  model__C: 0.1516625501937051
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model: LogisticRegression()
-  model__C: 0.13202436375020885
+  model__C: 0.0018041249616417843
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
-  model__C: 0.14334322198329402
+  model__C: 0.05630234360422227
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
-  model__C: 0.08660262701336162
+  model__C: 2.8435050509054023e-05
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model: LogisticRegression()
-  model__C: 2.0966927462993702e-05
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model: LogisticRegression()
-  model__C: 0.08517524409174526
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model: LogisticRegression()
-  model__C: 0.12676506957153155
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 0.7099628394368531
+  model__C: 0.05863493640488032
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 0.08647909238048165
+  model__C: 0.04931484849233488
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 0.0007937139217009028
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
+  model__C: 0.056958069906866006
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.05702616578159846
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
   model__C: 100.0
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
-  model__C: 0.06494968173400538
+  model__C: 0.05697287500348787
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 1.0122902083467277e-06
+  model__C: 1.001235032928922e-06
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
-  model__C: 3.098912243047316e-05
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  model__C: 0.056498042891914624
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 0.07340066278903362
+  model__C: 1.0018448861508209e-06
   prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model: LogisticRegression()
-  model__C: 0.07385760285784357
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model: LogisticRegression()
-  model__C: 0.07386557509924815
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model: LogisticRegression()
-  model__C: 0.07403442423555617
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model: LogisticRegression()
-  model__C: 2.377987759721434e-05
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model: LogisticRegression()
-  model__C: 0.01872703784616332
-  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 0.07344560511771862
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model: LogisticRegression()
-  model__C: 0.13077269987632176
+  model__C: 0.8973468385794555
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
-  model__C: 99.28235685873072
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer()
-  prep__numeric__scaler__transformer: StandardScaler()
-- model: LogisticRegression()
-  model__C: 0.01092619772760654
+  model__C: 0.0563625758062249
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 7.766475259329311
+  model__C: 0.05658904436015673
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.05676171712944806
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 1.0024049992668136e-06
   prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 0.00011211660741924509
+  model__C: 0.05679452989095846
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model: LogisticRegression()
-  model__C: 0.003851222278737635
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model: LogisticRegression()
-  model__C: 0.06686034362213318
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 3.734592315868555e-06
+  model__C: 2.1508721500934083e-05
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: MinMaxScaler()
 - model: LogisticRegression()
-  model__C: 99.34994480232808
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
-  prep__numeric__scaler__transformer: MinMaxScaler()
-- model: LogisticRegression()
-  model__C: 0.06672457466363003
-  prep__non_numeric__encoder__transformer: OneHotEncoder()
-  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  model__C: 98.45545079713727
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 3.509197053151399
+  model__C: 0.057643676945848134
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.057891868159804974
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.057965289032312885
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.0024753982950552387
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
-  model__C: 0.06714147576877103
+  model__C: 0.0030454722750913677
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.02414174148849732
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model: LogisticRegression()
+  model__C: 0.5975768257301198
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.2312760807453684
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model: LogisticRegression()
+  model__C: 0.06195866182480528
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 6.166342099730666e-05
+  prep__non_numeric__encoder__transformer: CustomOrdinalEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
+  prep__numeric__scaler__transformer: MinMaxScaler()
+- model: LogisticRegression()
+  model__C: 0.06057813859480893
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.06019879981335455
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.060179933030892356
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.06013446545699532
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.060156381168241485
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
+  prep__numeric__scaler__transformer: StandardScaler()
+- model: LogisticRegression()
+  model__C: 0.06015958481543107
+  prep__non_numeric__encoder__transformer: OneHotEncoder()
+  prep__numeric__imputer__transformer: SimpleImputer(strategy='most_frequent')
+  prep__numeric__pca__transformer: PCA('mle')
   prep__numeric__scaler__transformer: StandardScaler()
 - model: LogisticRegression()
   prep__non_numeric__encoder__transformer: OneHotEncoder()
   prep__numeric__imputer__transformer: SimpleImputer()
+  prep__numeric__pca__transformer: None
   prep__numeric__scaler__transformer: StandardScaler()
 timings:
   fit time averages:
-  - 0.05084221363067627
-  - 0.036221790313720706
-  - 0.04420249462127686
-  - 0.0397911787033081
-  - 0.04047398567199707
-  - 0.03952281475067139
-  - 0.048341989517211914
-  - 0.04426751136779785
-  - 0.06257553100585937
-  - 0.01748974323272705
-  - 0.030466842651367187
-  - 0.026828432083129884
-  - 0.010525321960449219
-  - 0.017833971977233888
-  - 0.02516512870788574
-  - 0.03312516212463379
-  - 0.05384039878845215
-  - 0.025524234771728514
-  - 0.027879929542541503
-  - 0.02838282585144043
-  - 0.02561526298522949
-  - 0.017044758796691893
-  - 0.027960658073425293
-  - 0.03433868885040283
-  - 0.03508815765380859
-  - 0.0834620475769043
-  - 0.038507699966430664
-  - 0.04667389392852783
-  - 0.03906981945037842
-  - 0.0306593656539917
-  - 0.033841705322265624
-  - 0.020300912857055663
-  - 0.017016077041625978
-  - 0.01803302764892578
-  - 0.01715717315673828
-  - 0.013919425010681153
-  - 0.028722763061523438
-  - 0.036103129386901855
-  - 0.03784310817718506
-  - 0.034084224700927736
-  - 0.014504671096801758
-  - 0.03588266372680664
-  - 0.01614844799041748
-  - 0.0305281400680542
-  - 0.027725577354431152
-  - 0.033917784690856934
-  - 0.07300972938537598
-  - 0.03717789649963379
-  - 0.027720379829406738
-  - 0.017982101440429686
-  - 0.01894230842590332
+  - 0.047223877906799314
+  - 0.036296963691711426
+  - 0.052099609375
+  - 0.04117629528045654
+  - 0.046825504302978514
+  - 0.03817946910858154
+  - 0.05448126792907715
+  - 0.05757300853729248
+  - 0.038364100456237796
+  - 0.01474761962890625
+  - 0.014854836463928222
+  - 0.03348209857940674
+  - 0.030765199661254884
+  - 0.04075264930725098
+  - 0.01868720054626465
+  - 0.017356133460998534
+  - 0.015634679794311525
+  - 0.02202455997467041
+  - 0.017361760139465332
+  - 0.018947720527648926
+  - 0.017488431930541993
+  - 0.04518516063690185
+  - 0.01629185676574707
+  - 0.026053428649902344
+  - 0.01862461566925049
+  - 0.017766118049621582
+  - 0.06114602088928223
+  - 0.022044610977172852
+  - 0.020525574684143066
+  - 0.0179962158203125
+  - 0.024570298194885255
+  - 0.017640042304992675
+  - 0.016936564445495607
+  - 0.10364105701446533
+  - 0.039171385765075686
+  - 0.029408359527587892
+  - 0.053131818771362305
+  - 0.016232609748840332
+  - 0.04071366786956787
+  - 0.022920632362365724
+  - 0.03547224998474121
+  - 0.03283672332763672
+  - 0.03154103755950928
+  - 0.027554988861083984
+  - 0.0207350492477417
+  - 0.02500748634338379
+  - 0.019850897789001464
+  - 0.018996047973632812
+  - 0.01990056037902832
+  - 0.019318342208862305
+  - 0.019243741035461427
   fit time standard deviations:
-  - 0.01264329588590805
-  - 0.00890031561838682
-  - 0.019050387072038977
-  - 0.009277292047391295
-  - 0.009996937224560885
-  - 0.009723079910221949
-  - 0.012307074506560219
-  - 0.011029937372363637
-  - 0.010215857350106227
-  - 0.004789500789015673
-  - 0.012201668561986827
-  - 0.01285615889157106
-  - 0.00041867496195396376
-  - 0.008586153688955414
-  - 0.0075559571980063035
-  - 0.014916653811459325
-  - 0.014150194440761429
-  - 0.008183606188820428
-  - 0.011496310430192124
-  - 0.010299759533272636
-  - 0.010897471010499038
-  - 0.006128319075243077
-  - 0.006541280118157248
-  - 0.006466760852563316
-  - 0.009026858378744118
-  - 0.06320036594810712
-  - 0.017225297936313517
-  - 0.009540342988006973
-  - 0.01184150715980411
-  - 0.014975233671950649
-  - 0.01192528679978878
-  - 0.006563637896396805
-  - 0.004576772807229267
-  - 0.00509031602141009
-  - 0.0043095259463746495
-  - 0.0034657003067465474
-  - 0.005930661699879691
-  - 0.01159068014430503
-  - 0.010961590452400983
-  - 0.009983577189461431
-  - 0.003290851406292737
-  - 0.009046624526660772
-  - 0.006296913015743411
-  - 0.013453201371504686
-  - 0.011383159533202352
-  - 0.008856984243115451
-  - 0.014549782952885358
-  - 0.014286154943514887
-  - 0.006585729161466657
-  - 0.004105042189930334
-  - 0.0021722705252678258
+  - 0.013190936083357231
+  - 0.006476061177572773
+  - 0.011872783895227586
+  - 0.00971484810076404
+  - 0.011285215065178867
+  - 0.008165660025823388
+  - 0.012711525153430476
+  - 0.016234032377676334
+  - 0.00534506541102038
+  - 0.00419622993286569
+  - 0.0028353343131188764
+  - 0.010631656691987647
+  - 0.00772454445306057
+  - 0.014170844997649859
+  - 0.006327191957777098
+  - 0.005836238150124205
+  - 0.0035454521370340618
+  - 0.008055013208005677
+  - 0.004923499878732498
+  - 0.005544554237097664
+  - 0.004535735496257764
+  - 0.008737202116874463
+  - 0.0030199913586634146
+  - 0.007166024492672647
+  - 0.004918194968582709
+  - 0.007530137687256461
+  - 0.014828878568524795
+  - 0.007428079406637197
+  - 0.005383093928684176
+  - 0.004111646932550611
+  - 0.006209148478347926
+  - 0.003879187493716331
+  - 0.004117029613195409
+  - 0.034131899101084336
+  - 0.007878915600719032
+  - 0.0071801790822605144
+  - 0.014886545141981844
+  - 0.00418415066244859
+  - 0.010756114931255608
+  - 0.010642280401946114
+  - 0.010221114111993817
+  - 0.00877915845595648
+  - 0.008150271293690677
+  - 0.008987916485426416
+  - 0.006731578495985379
+  - 0.008863538065817415
+  - 0.006154690789425551
+  - 0.005597615168634989
+  - 0.006995457368738708
+  - 0.006195861253190684
+  - 0.0022904954628259044
   score time averages:
-  - 0.010118389129638672
-  - 0.006330513954162597
-  - 0.033800387382507326
-  - 0.01792886257171631
-  - 0.005651092529296875
-  - 0.008684253692626953
-  - 0.0069004535675048825
-  - 0.014729928970336915
-  - 0.02003796100616455
-  - 0.006729888916015625
-  - 0.008852410316467284
-  - 0.007388925552368164
-  - 0.004207777976989746
-  - 0.00589597225189209
-  - 0.010301566123962403
-  - 0.018712687492370605
-  - 0.021388149261474608
-  - 0.009580636024475097
-  - 0.007781362533569336
-  - 0.01019117832183838
-  - 0.005904889106750489
-  - 0.0052618741989135746
-  - 0.009363317489624023
-  - 0.011173248291015625
-  - 0.008725118637084962
-  - 0.015748047828674318
-  - 0.020099544525146486
-  - 0.014301133155822755
-  - 0.007854700088500977
-  - 0.013413095474243164
-  - 0.014951491355895996
-  - 0.006529617309570313
-  - 0.006196331977844238
-  - 0.0062541007995605465
-  - 0.004663610458374023
-  - 0.005715036392211914
-  - 0.014119577407836915
-  - 0.006836438179016113
-  - 0.014426803588867188
-  - 0.005489420890808105
-  - 0.0071808815002441405
-  - 0.01332683563232422
-  - 0.005510497093200684
-  - 0.009584808349609375
-  - 0.007820558547973634
-  - 0.008382463455200195
-  - 0.010022783279418945
-  - 0.007878398895263672
-  - 0.007086324691772461
-  - 0.005779075622558594
-  - 0.004454922676086426
+  - 0.007634496688842774
+  - 0.005680394172668457
+  - 0.02061622142791748
+  - 0.018263769149780274
+  - 0.007501721382141113
+  - 0.0065190792083740234
+  - 0.009277820587158203
+  - 0.011821460723876954
+  - 0.0140305757522583
+  - 0.00595543384552002
+  - 0.006707549095153809
+  - 0.005905318260192871
+  - 0.011872506141662598
+  - 0.010346102714538574
+  - 0.006325316429138183
+  - 0.00722198486328125
+  - 0.0063903570175170895
+  - 0.005545592308044434
+  - 0.006441569328308106
+  - 0.005801701545715332
+  - 0.006603813171386719
+  - 0.014869475364685058
+  - 0.006051445007324218
+  - 0.014499497413635255
+  - 0.005585694313049316
+  - 0.006678247451782226
+  - 0.018754291534423827
+  - 0.005610537528991699
+  - 0.006121945381164551
+  - 0.005739545822143555
+  - 0.015674352645874023
+  - 0.00579376220703125
+  - 0.0057598590850830075
+  - 0.035857653617858885
+  - 0.010133123397827149
+  - 0.007971835136413575
+  - 0.01239151954650879
+  - 0.00646677017211914
+  - 0.019537711143493654
+  - 0.0069131612777709964
+  - 0.007706999778747559
+  - 0.01072990894317627
+  - 0.008867669105529784
+  - 0.01573164463043213
+  - 0.008018898963928222
+  - 0.007159805297851563
+  - 0.006242609024047852
+  - 0.007066917419433594
+  - 0.006847262382507324
+  - 0.006424069404602051
+  - 0.004385900497436523
   score time standard deviations:
-  - 0.0035945744239256525
-  - 0.0026699561556719604
-  - 0.013091873983679291
-  - 0.005114052635129577
-  - 0.0012454989958685257
-  - 0.0026916940766906813
-  - 0.002619711351407568
-  - 0.005118218317824747
-  - 0.005725664750839772
-  - 0.00287560611221855
-  - 0.003053222061059751
-  - 0.0047731873646152615
-  - 0.0001579084983384018
-  - 0.002000279267458096
-  - 0.005353232548203333
-  - 0.008252106109743798
-  - 0.008687769730426596
-  - 0.003022970393043124
-  - 0.003913020042302522
-  - 0.003949961506974602
-  - 0.0020386952777490972
-  - 0.0010402069513355617
-  - 0.0032503383349330515
-  - 0.0035477827038366064
-  - 0.0029566352704357784
-  - 0.013276239035567095
-  - 0.00665307232966599
-  - 0.003489718572769984
-  - 0.001762182917761933
-  - 0.003068609954348467
-  - 0.003520178533265201
-  - 0.0030391842380848777
-  - 0.0026023284394874843
-  - 0.002946578014471326
-  - 0.0007682037247554442
-  - 0.0024277233073905437
-  - 0.003994815849305376
-  - 0.0019456912112132986
-  - 0.005307505505489011
-  - 0.0015049380793363191
-  - 0.003182808480000855
-  - 0.0037067369894785655
-  - 0.002282528253490212
-  - 0.0034686688116856127
-  - 0.0021779609464996335
-  - 0.003197180426868853
-  - 0.0022946165577379775
-  - 0.0021870304663440306
-  - 0.0028269245657281763
-  - 0.00242311457957598
-  - 0.0015430009073271317
+  - 0.0030660132616211967
+  - 0.002663381890967286
+  - 0.005559664300377417
+  - 0.005161929480021576
+  - 0.0033587784301183153
+  - 0.0019292411178531879
+  - 0.0033400374684775273
+  - 0.002956797350282725
+  - 0.00428096418696432
+  - 0.0022018858768976792
+  - 0.003599410401102708
+  - 0.002029313130444603
+  - 0.003126494701307222
+  - 0.005092466174379254
+  - 0.0018304771703753005
+  - 0.0044982184459296925
+  - 0.003361748484448592
+  - 0.002558237183009614
+  - 0.003279589224684349
+  - 0.0021962528148589747
+  - 0.003315923416240107
+  - 0.003865510416643905
+  - 0.0022532574124223435
+  - 0.00423269514772044
+  - 0.0015265668996238093
+  - 0.002676416496325684
+  - 0.005511139345328535
+  - 0.002929293691041987
+  - 0.0028260734993945436
+  - 0.0028392277760442373
+  - 0.005686805382221943
+  - 0.0026745772204470803
+  - 0.0023343515235353923
+  - 0.017443174920843622
+  - 0.00376714854239978
+  - 0.0031873893965673884
+  - 0.006201150436210603
+  - 0.002060719238142759
+  - 0.00534983879087683
+  - 0.003265479303822519
+  - 0.0034332211882645096
+  - 0.004097914537884308
+  - 0.005004378137481542
+  - 0.005837361542566012
+  - 0.0038714072300985135
+  - 0.0026026043190702642
+  - 0.003147125667152954
+  - 0.003191781374101896
+  - 0.0029253246825074533
+  - 0.0028406547075811267
+  - 0.0010798873219865623
