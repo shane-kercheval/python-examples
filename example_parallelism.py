@@ -36,7 +36,7 @@ def main():
         for i in range(0, len(parameters1)):
             print(score(parameters1[i], parameters2[i]))
 
-    pool = ProcessPoolExecutor(max_workers=multiprocessing.cpu_count() - 1)
+    pool = ProcessPoolExecutor(max_workers=use_cpus)
     with Timer("Example - Parallel"):
         results = list(pool.map(score, parameters1, parameters2))
         print(results)
