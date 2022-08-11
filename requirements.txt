@@ -12,6 +12,7 @@ plotly
 plotly-express
 python-dateutil
 PyYAML
+regex
 scikit-learn
 scikit-optimize
 xgboost
