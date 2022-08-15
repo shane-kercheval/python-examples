@@ -3,6 +3,7 @@ import multiprocessing
 import datetime
 from time import sleep
 
+
 class Timer:
     def __init__(self, message):
         self._message = message
@@ -23,6 +24,7 @@ def score(param1, param2):
     sleep(2)
     return (param1, param2)
 
+
 def main():
     parameters1 = [1, 2, 3, 4]
     parameters2 = ['a', 'b', 'c', 'd']
@@ -36,10 +38,11 @@ def main():
         for i in range(0, len(parameters1)):
             print(score(parameters1[i], parameters2[i]))
 
-    pool = ProcessPoolExecutor(max_workers=use_cpus)
-    with Timer("Example - Parallel"):
-        results = list(pool.map(score, parameters1, parameters2))
+    # Parallel
+    with ProcessPoolExecutor(max_workers=use_cpus) as executor, Timer("Example - Parallel"):
+        results = list(executor.map(score, parameters1, parameters2))
         print(results)
+
 
 if __name__ == '__main__':
     main()
