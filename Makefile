@@ -15,23 +15,18 @@ notebook:
 zsh:
 	docker exec -it python-examples-bash-1 /bin/zsh
 
-
 ####
 # Conda
 ####
 # conda activate python_examples
-	
-
 env:
 	conda env create -f environment.yml
-
 
 export_env:
 	conda env export > environment.yml	
 
 remove_env:
 	conda env remove -n $(conda_env_name)
-
 
 ####
 # Project
