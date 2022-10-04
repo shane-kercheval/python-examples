@@ -20,7 +20,7 @@ dependencies:
   - bzip2=1.0.8=h620ffc9_4
   - c-ares=1.18.1=h1a28f6b_0
   - ca-certificates=2022.07.19=hca03da5_0
-  - certifi=2022.6.15=py310hca03da5_0
+  - certifi=2022.9.14=py310hca03da5_0
   - cffi=1.15.1=py310h22df2f2_0
   - charset-normalizer=2.0.4=pyhd3eb1b0_0
   - click=8.0.4=py310hca03da5_0
@@ -186,6 +186,7 @@ dependencies:
   - websocket-client=0.58.0=py310hca03da5_4
   - wheel=0.37.1=pyhd3eb1b0_0
   - widgetsnbextension=3.5.2=py310hca03da5_0
+  - xmltodict=0.12.0=pyhd3eb1b0_0
   - xz=5.2.5=h1a28f6b_1
   - yaml=0.2.5=h1a28f6b_0
   - zeromq=4.3.4=hc377ac9_0
