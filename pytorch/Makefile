@@ -9,3 +9,4 @@ env_mac: create_env
 	# https://pytorch.org/get-started/locally/
 	conda install pytorch torchvision torchaudio -c pytorch
 	conda activate pytorch_test
+	conda install ipykernel
