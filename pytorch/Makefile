@@ -1,7 +1,8 @@
 create_env:
 	conda create --name pytorch_test python=3.9
 	conda activate pytorch_test
-	conda install ipykernel
+	conda install ipykernel pandas
+	pip install helpsk jinja2
 
 env_linux: create_env
 	# https://pytorch.org/get-started/locally/
