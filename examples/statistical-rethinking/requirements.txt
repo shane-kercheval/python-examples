@@ -1,0 +1,14 @@
+click
+helpsk
+flake8
+jupyter-contrib-nbextensions
+matplotlib
+notebook
+numpy
+pandas
+plotly
+plotly-express
+pymc
+python-dateutil
+seaborn
+statsmodels
