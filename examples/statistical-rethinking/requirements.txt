@@ -1,6 +1,7 @@
 click
 helpsk
 flake8
+graphviz
 jupyter-contrib-nbextensions
 matplotlib
 notebook

@@ -3,6 +3,8 @@ FROM python:3.10
 RUN apt-get update -y && apt-get install zsh -y
 RUN PATH="$PATH:/usr/bin/zsh"
 
+RUN apt-get install graphviz -y
+
 RUN mkdir /code
 WORKDIR /code
 COPY requirements.txt .
