@@ -3,7 +3,6 @@ import numpy as np
 import arviz as az
 
 
-
 def get_dataset_names(inference_data: az.InferenceData) -> list[str]:
     return inference_data._group_names(None, None)
 
@@ -92,22 +91,3 @@ def get_posterior_samples(
         stack(sample=['chain', 'draw']).\
         data
     return samples
-
-
-# def get_posterior_samples(posterior_inference: az.InferenceData, variable_name: str):
-#     return posterior_inference.posterior[variable_name].stack(sample=["chain", "draw"]).data
-
-
-# def get_prediction_samples(prediction_inference: az.InferenceData):
-#     variable_name = get_variable_names(prediction_inference)[0]
-#     return prediction_inference.posterior_predictive[variable_name].stack(sample=["chain", "draw"]).data
-
-
-def get_prediction_samples(prediction_inference: az.InferenceData, type: str = 'posterior'):
-    """
-    Args:
-        type:
-            a string with a value of either `posterior` or `prior`
-    """
-    variable_name = get_variable_names(prediction_inference)[0]
-    return prediction_inference[f'{type}_predictive'][variable_name].stack(sample=["chain", "draw"]).data
