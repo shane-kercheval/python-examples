@@ -66,8 +66,8 @@ def get_posterior_samples(
     multiplied by the number of `chains` specified in `pm.sample()`.
 
     If `variable_name` is not None, then the samples returned correspond to the model parameter
-    with the same name. In this case, a 1d array is returned and the length corresponds to the number of `draws`
-    multiplied by the number of `chains` specified in `pm.sample()`.
+    with the same name. In this case, a 1d array is returned and the length corresponds to the
+    number of `draws` multiplied by the number of `chains` specified in `pm.sample()`.
 
     args:
         inference_data:

@@ -1,3 +1,5 @@
+.PHONY: tests
+
 ####
 # DOCKER
 ####
@@ -29,6 +31,9 @@ zsh:
 ####
 linting:
 	flake8 --max-line-length 99 .
+
+tests: linting
+	pytest tests/
 
 chapter_1:
 	jupyter nbconvert --execute --to html notebooks/chapter-1.ipynb
