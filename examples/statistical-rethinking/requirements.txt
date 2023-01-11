@@ -11,5 +11,6 @@ plotly
 plotly-express
 pymc
 python-dateutil
+pytest
 seaborn
 statsmodels
