@@ -1,5 +1,7 @@
 from typing import Optional
+import numpy as np
 import arviz as az
+
 
 
 def get_dataset_names(inference_data: az.InferenceData) -> list[str]:
@@ -24,7 +26,40 @@ def get_prior_samples(
         inference_data: az.InferenceData,
         variable_name: Optional[str] = None) -> np.ndarray:
     """
-    Returns a 2d array of samples associated with the prior distributions.
+    Returns a 1d or 2d array of samples associated with the prior distributions.
+
+    If `variable_name` is None, then the samples returned correspond to the target variable. In
+    this case, a 2d array is returned and the number of rows corresponds to the number of
+    observations given to the model. The number of columns corresponds to the value passed into the
+    `samples` parameter of the `pm.sample_prior_predictive` function.
+
+    If `variable_name` is not None, then the samples returned correspond to the model parameter
+    with the same name. In this case, a 1d array is returned and the length corresponds to the
+    value passed into the `samples` parameter of the `pm.sample_prior_predictive` function.
+
+    args:
+        inference_data: object returned by `pm.sample_prior_predictive`
+        variable_name:
+            if None, returns the samples associated with the target variable
+            otherwise, returns the samples associated with the model parameter passed in
+    """
+    if variable_name is None:
+        variable_name = get_target_name(inference_data)
+        dataset_name = 'prior_predictive'
+    else:
+        dataset_name = 'prior'
+
+    samples = inference_data[dataset_name][variable_name].\
+        stack(sample=['chain', 'draw']).\
+        data
+    return samples
+
+
+def get_posterior_samples(
+        inference_data: az.InferenceData,
+        variable_name: Optional[str] = None) -> np.ndarray:
+    """
+    Returns a 2d array of samples associated with the posterior distributions.
 
     The number of rows in the 2d array corresponds to the number of observations given to the
     model. The number of columns corresponds to the value passed into the `samples` parameter
@@ -44,9 +79,8 @@ def get_prior_samples(
     return samples
 
 
-
-def get_posterior_samples(posterior_inference: az.InferenceData, variable_name: str):
-    return posterior_inference.posterior[variable_name].stack(sample=["chain", "draw"]).data
+# def get_posterior_samples(posterior_inference: az.InferenceData, variable_name: str):
+#     return posterior_inference.posterior[variable_name].stack(sample=["chain", "draw"]).data
 
 
 # def get_prediction_samples(prediction_inference: az.InferenceData):

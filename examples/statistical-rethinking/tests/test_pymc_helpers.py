@@ -45,42 +45,23 @@ def test_asdf():
     assert ph.get_target_name(idata_posterior) == 'height'
     assert ph.get_target_name(idata_predictive) == 'height'
 
+    prior_samples_target = ph.get_prior_samples(idata_prior)
+    assert prior_samples_target.shape == (len(df), num_prior_samples)
+    abs(prior_samples_target.flatten().mean() - 178) < 5
 
-    len(df)
+    prior_samples_sigma = ph.get_prior_samples(idata_prior, variable_name='sigma')
+    assert prior_samples_sigma.shape == (num_prior_samples,)
+    assert abs(prior_samples_sigma.mean() - 25) < 5
 
-    from typing import Optional
-    import arviz as az
-    def get_prior_samples(
-            inference_data: az.InferenceData,
-            variable_name: Optional[str] = None) -> np.ndarray:
-        """
-        Returns a 2d array of samples associated with the prior distributions.
+    prior_samples_a = ph.get_prior_samples(idata_prior, variable_name='a')
+    assert prior_samples_a.shape == (num_prior_samples,)
+    assert abs(prior_samples_a.mean() - 178) < 5
 
-        The number of rows in the 2d array corresponds to the number of observations given to the
-        model. The number of columns corresponds to the value passed into the `samples` parameter
-        of the `pm.sample_prior_predictive` function.
-
-        args:
-            inference_data: object returned by `pm.sample_prior_predictive`
-            variable_name:
-                if None, returns the samples associated with the target variable
-                otherwise, returns the samples associated with the variable passed in
-        """
-        if variable_name is None:
-            variable_name = ph.get_target_name(inference_data)
-        samples = inference_data['prior_predictive'][variable_name].\
-            stack(sample=['chain', 'draw']).\
-            data
-        return samples
-
-    prior_samples = get_prior_samples(idata_prior)
-    assert prior_samples.shape == (len(df), num_prior_samples)
+    prior_samples_b = ph.get_prior_samples(idata_prior, variable_name='b')
+    assert prior_samples_b.shape == (num_prior_samples,)
+    assert abs(prior_samples_b.mean() - 0) < 3
 
 
-
-
-
-    len(prior_samples.flatten())
 
 
 
