@@ -59,21 +59,36 @@ def get_posterior_samples(
         inference_data: az.InferenceData,
         variable_name: Optional[str] = None) -> np.ndarray:
     """
-    Returns a 2d array of samples associated with the posterior distributions.
+    Returns a 1d or 2d array of samples associated with the posterior distributions.
 
-    The number of rows in the 2d array corresponds to the number of observations given to the
-    model. The number of columns corresponds to the value passed into the `samples` parameter
-    of the `pm.sample_prior_predictive` function.
+    If `variable_name` is None, then the samples returned correspond to the target variable. In
+    this case, a 2d array is returned and the number of rows corresponds to the number of
+    observations given to the model. The number of columns corresponds to the number of `draws`
+    multiplied by the number of `chains` specified in `pm.sample()`.
+
+    If `variable_name` is not None, then the samples returned correspond to the model parameter
+    with the same name. In this case, a 1d array is returned and the length corresponds to the number of `draws`
+    multiplied by the number of `chains` specified in `pm.sample()`.
 
     args:
-        inference_data: object returned by `pm.sample_prior_predictive`
+        inference_data:
+            object returned by `pm.sample_posterior_predictive`
+            For samples associated with target variable, pass the object returned by the
+            `pm.sample_posterior_predictive` function.
+            For samples associated with one of the model variables, pass the object returned by the
+            `pm.sample` function.
+
         variable_name:
             if None, returns the samples associated with the target variable
-            otherwise, returns the samples associated with the variable passed in
+            otherwise, returns the samples associated with the model parameter passed in
     """
     if variable_name is None:
         variable_name = get_target_name(inference_data)
-    samples = inference_data['prior_predictive'][variable_name].\
+        dataset_name = 'posterior_predictive'
+    else:
+        dataset_name = 'posterior'
+
+    samples = inference_data[dataset_name][variable_name].\
         stack(sample=['chain', 'draw']).\
         data
     return samples

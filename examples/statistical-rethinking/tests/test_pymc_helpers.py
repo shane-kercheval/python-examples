@@ -9,6 +9,8 @@ def test_asdf():
     df = pd.read_csv("/code/data/Howell1.csv", sep=";", header=0)
 
     num_prior_samples = 10
+    num_posterior_samples = 1000
+    num_chains = 3
 
     with pm.Model() as model:
         a = pm.Normal('a', mu=178, sigma=20)
@@ -19,7 +21,7 @@ def test_asdf():
         idata_prior = pm.sample_prior_predictive(samples=num_prior_samples, random_seed=42)
 
     with model:
-        idata_posterior = pm.sample(draws=100, tune=10, chains=3)
+        idata_posterior = pm.sample(draws=num_posterior_samples, tune=1000, chains=num_chains)
         idata_predictive = pm.sample_posterior_predictive(idata_posterior, random_seed=42)
 
     assert ph.get_dataset_names(idata_prior) == ['prior', 'prior_predictive', 'observed_data']
@@ -61,14 +63,18 @@ def test_asdf():
     assert prior_samples_b.shape == (num_prior_samples,)
     assert abs(prior_samples_b.mean() - 0) < 3
 
+    posterior_samples_target = ph.get_posterior_samples(idata_predictive)
+    assert posterior_samples_target.shape == (len(df), num_posterior_samples * num_chains)
+    assert abs(posterior_samples_target.flatten().mean() - df['height'].mean()) < 5
 
+    posterior_samples_sigma = ph.get_posterior_samples(idata_posterior, variable_name='sigma')
+    assert posterior_samples_sigma.shape == (num_posterior_samples * num_chains,)
+    assert abs(posterior_samples_sigma.mean() - 10) < 5
 
+    posterior_samples_a = ph.get_posterior_samples(idata_posterior, variable_name='a')
+    assert posterior_samples_a.shape == (num_posterior_samples * num_chains,)
+    assert abs(posterior_samples_a.mean() - 138) < 5
 
-
-    prior_samples.prior_predictive["height"].data[0].flatten()
-
-
-    ph.get_variable_names(idata_prior, dataset_name='observed')
-
-    ph.get_dataset_names(idata_posterior)
-    ph.get_dataset_names(idata_predictive)
+    posterior_samples_b = ph.get_posterior_samples(idata_posterior, variable_name='b')
+    assert posterior_samples_b.shape == (num_posterior_samples * num_chains,)
+    assert abs(posterior_samples_b.mean() - 0.56) < 1
