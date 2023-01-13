@@ -1,9 +1,7 @@
 import source.pymc_helpers as ph
 
 
-def test__get_dataset_names(
-        height_idata_prior, height_idata_posterior, height_idata_predictive,
-        height_expected_variables):
+def test__get_dataset_names(height_idata_prior, height_idata_posterior, height_idata_predictive):
     assert ph.get_dataset_names(height_idata_prior) == ['prior', 'prior_predictive', 'observed_data']  # noqa
     assert ph.get_dataset_names(height_idata_posterior) == ['posterior', 'sample_stats', 'observed_data']  # noqa
     assert ph.get_dataset_names(height_idata_predictive) == ['posterior_predictive', 'observed_data']  # noqa
