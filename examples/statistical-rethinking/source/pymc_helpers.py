@@ -4,13 +4,31 @@ import arviz as az
 
 
 def get_dataset_names(inference_data: az.InferenceData) -> list[str]:
+    """
+    Returns the dataset names associated with `inference_data`
+
+    Args:
+        inference_data:
+            object returned from e.g. `pm.sample_prior_predictive()`, `pm.sample()`, or
+            `pm.sample_posterior_predictive()`
+    """
     return inference_data._group_names(None, None)
 
 
 def get_variable_names(
         inference_data: az.InferenceData,
         dataset_name: Optional[str] = None) -> list[str]:
+    """
+    Returns the variable names associated with a dataset in `inference_data`.
 
+    Args:
+        inference_data:
+            object returned from e.g. `pm.sample_prior_predictive()`, `pm.sample()`, or
+            `pm.sample_posterior_predictive()`
+        dataset_name:
+            The name of the dataset to get the variable names from. If `None`, the first dataset
+            returned from `get_dataset_names()` is used.
+    """
     if dataset_name is None:
         dataset_name = get_dataset_names(inference_data)[0]
 
@@ -18,6 +36,14 @@ def get_variable_names(
 
 
 def get_target_name(inference_data: az.InferenceData) -> str:
+    """
+    Returns the name of the target variable associated with `inference_data`.
+
+    Args:
+        inference_data:
+            object returned from e.g. `pm.sample_prior_predictive()`, `pm.sample()`, or
+            `pm.sample_posterior_predictive()`
+    """
     return get_variable_names(inference_data=inference_data, dataset_name='observed_data')[0]
 
 
