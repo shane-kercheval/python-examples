@@ -1,4 +1,6 @@
 from typing import Optional
+import pymc as pm
+import pandas as pd
 import numpy as np
 import arviz as az
 
@@ -117,3 +119,36 @@ def get_posterior_samples(
         stack(sample=['chain', 'draw']).\
         data
     return samples
+
+
+def posterior_predict(
+        model: pm.model.Model,
+        idata_posterior: az.InferenceData,
+        data: pd.DataFrame,
+        x_name: str = 'X',
+        y_name: str = 'y') -> np.ndarray:
+    # Update data reference.
+    pm.set_data({x_name: data, y_name: np.zeros(len(data))}, model=model)
+    # Generate posterior samples.
+    idata = pm.sample_posterior_predictive(idata_posterior, model=model)
+    samples = idata['posterior_predictive'][get_target_name(idata)]\
+        .stack(sample=['chain', 'draw']).\
+        data
+    return samples
+
+
+def predict(
+        model: pm.model.Model,
+        idata_posterior: az.InferenceData,
+        data: pd.DataFrame,
+        x_name: str = 'X',
+        y_name: str = 'y') -> float:
+    # predict a point estimate
+    samples = posterior_predict(
+        model=model,
+        idata_posterior=idata_posterior,
+        data=data,
+        x_name=x_name,
+        y_name=y_name,
+    )
+    return np.median(samples, axis=1)

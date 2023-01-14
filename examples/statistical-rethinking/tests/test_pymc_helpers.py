@@ -1,10 +1,11 @@
+import numpy as np
 import source.pymc_helpers as ph
 
 
 def test__get_dataset_names(height_idata_prior, height_idata_posterior, height_idata_predictive):
-    assert ph.get_dataset_names(height_idata_prior) == ['prior', 'prior_predictive', 'observed_data']  # noqa
-    assert ph.get_dataset_names(height_idata_posterior) == ['posterior', 'sample_stats', 'observed_data']  # noqa
-    assert ph.get_dataset_names(height_idata_predictive) == ['posterior_predictive', 'observed_data']  # noqa
+    assert ph.get_dataset_names(height_idata_prior) == ['prior', 'prior_predictive', 'observed_data', 'constant_data']  # noqa
+    assert ph.get_dataset_names(height_idata_posterior) == ['posterior', 'sample_stats', 'observed_data', 'constant_data']  # noqa
+    assert ph.get_dataset_names(height_idata_predictive) == ['posterior_predictive', 'observed_data', 'constant_data']  # noqa
 
 
 def test__get_variable_names(
@@ -69,3 +70,24 @@ def test__get_posterior_samples(
     posterior_samples_b = ph.get_posterior_samples(height_idata_posterior, variable_name='b')
     assert posterior_samples_b.shape == (height_model_posterior_samples * height_model_chains,)
     assert abs(posterior_samples_b.mean() - 0.56) < 1
+
+
+def test__posterior_predict(
+        height_model, height_idata_posterior, height_model_posterior_samples,
+        height_model_chains):
+    x_test = np.arange(64)
+    prediction_samples = ph.posterior_predict(
+        model=height_model,
+        idata_posterior=height_idata_posterior,
+        data=x_test)
+    assert len(prediction_samples) == len(x_test)
+    assert prediction_samples.shape[1] == height_model_posterior_samples * height_model_chains
+
+
+def test__predict(height_model, height_idata_posterior):
+    x_test = np.arange(64)
+    predictions = ph.predict(
+        model=height_model,
+        idata_posterior=height_idata_posterior,
+        data=x_test)
+    assert predictions.shape == (len(x_test),)

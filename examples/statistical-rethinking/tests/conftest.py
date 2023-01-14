@@ -31,12 +31,17 @@ def height_expected_variables():
 
 @pytest.fixture(scope="session")
 def height_model(df_height):
+    """Example 4.3B from Statistical Rethinking."""
     with pm.Model() as model:
+        # this is so we can update the data to make out of sample predictions
+        X = pm.MutableData("X", df_height.weight.values)
+        y = pm.MutableData("y", df_height.height.values)
+
         a = pm.Normal('a', mu=178, sigma=20)
         b = pm.Normal('b', mu=0, sigma=1)
         sigma = pm.Uniform('sigma', 0, 50)
-        mu = a + np.exp(b) * (df_height.weight.values - df_height.weight.mean())
-        height = pm.Normal('height', mu=mu, sigma=sigma, observed=df_height.height.values)  # noqa
+        mu = a + np.exp(b) * (X - df_height.weight.mean())
+        height = pm.Normal('height', mu=mu, sigma=sigma, observed=y)  # noqa
 
     return model
 
