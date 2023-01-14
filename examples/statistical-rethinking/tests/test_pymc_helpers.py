@@ -91,3 +91,17 @@ def test__predict(height_model, height_idata_posterior):
         idata_posterior=height_idata_posterior,
         data=x_test)
     assert predictions.shape == (len(x_test),)
+    assert (predictions > 50).all()
+    assert (predictions < 200).all()
+
+
+def test__predict_with_mean(height_model, height_idata_posterior):
+    x_test = np.arange(64)
+    predictions = ph.predict(
+        model=height_model,
+        idata_posterior=height_idata_posterior,
+        data=x_test,
+        aggregation_func=np.mean)
+    assert predictions.shape == (len(x_test),)
+    assert (predictions > 50).all()
+    assert (predictions < 200).all()

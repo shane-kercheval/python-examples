@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Callable, Optional
 import pymc as pm
 import pandas as pd
 import numpy as np
@@ -141,6 +141,7 @@ def predict(
         model: pm.model.Model,
         idata_posterior: az.InferenceData,
         data: pd.DataFrame,
+        aggregation_func: Callable = np.median,
         x_name: str = 'X',
         y_name: str = 'y') -> float:
     # predict a point estimate
@@ -151,4 +152,4 @@ def predict(
         x_name=x_name,
         y_name=y_name,
     )
-    return np.median(samples, axis=1)
+    return aggregation_func(samples, axis=1)
