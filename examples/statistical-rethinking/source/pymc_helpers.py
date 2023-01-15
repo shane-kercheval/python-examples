@@ -1,3 +1,4 @@
+from pydoc import doc
 from typing import Callable, Optional
 import pymc as pm
 import pandas as pd
@@ -121,16 +122,94 @@ def get_posterior_samples(
     return samples
 
 
+def posterior_predict_inference(
+        model: pm.model.Model,
+        idata_posterior: az.InferenceData,
+        data: pd.DataFrame,
+        x_name: str = 'X',
+        y_name: str = 'y') -> az.InferenceData:
+    """
+    Makes predictions on out of sample data via `set_data()` function and returns the corresponding
+    az.InferenceData object.
+
+    When defining the model, you must explicitly specify the X and y data used by the model, so
+    that data can be swapped out with an out of sample dataset. For example, with the `X` and `y`
+    variables used in the following example:
+
+    ```
+    X = pm.MutableData("X", df_height.weight.values)
+    y = pm.MutableData("y", df_height.height.values)
+
+    a = pm.Normal('a', mu=178, sigma=20)
+    b = pm.Normal('b', mu=0, sigma=1)
+    sigma = pm.Uniform('sigma', 0, 50)
+    mu = a + np.exp(b) * (X - df_height.weight.mean())
+    height = pm.Normal('height', mu=mu, sigma=sigma, observed=y)
+    ```
+
+    Args:
+        model:
+            the PYMC model to use
+        inference_data:
+            object returned by `pm.sample()`
+        data:
+            the new data to make predictions with
+        x_name:
+            the name of the X and y data. In the example above, the name of the X dataset is "X".
+        y_name:
+            the name of the X and y data. In the example above, the name of the y dataset is "y".
+    """
+    # Update data reference.
+    pm.set_data({x_name: data, y_name: np.zeros(len(data))}, model=model)
+    # Generate posterior samples.
+    return pm.sample_posterior_predictive(idata_posterior, model=model)
+
+
 def posterior_predict(
         model: pm.model.Model,
         idata_posterior: az.InferenceData,
         data: pd.DataFrame,
         x_name: str = 'X',
         y_name: str = 'y') -> np.ndarray:
-    # Update data reference.
-    pm.set_data({x_name: data, y_name: np.zeros(len(data))}, model=model)
-    # Generate posterior samples.
-    idata = pm.sample_posterior_predictive(idata_posterior, model=model)
+    """
+    Makes predictions on out of sample data via `set_data()` function and returns the samples
+    in a np.ndarray with a length equal to the length of the new dataset `data` and the number of
+    columns equal to the number draws multiplied by the number of chains passed to `pm.sample()`.
+
+    When defining the model, you must explicitly specify the X and y data used by the model, so
+    that data can be swapped out with an out of sample dataset. For example, with the `X` and `y`
+    variables used in the following example:
+
+    ```
+    X = pm.MutableData("X", df_height.weight.values)
+    y = pm.MutableData("y", df_height.height.values)
+
+    a = pm.Normal('a', mu=178, sigma=20)
+    b = pm.Normal('b', mu=0, sigma=1)
+    sigma = pm.Uniform('sigma', 0, 50)
+    mu = a + np.exp(b) * (X - df_height.weight.mean())
+    height = pm.Normal('height', mu=mu, sigma=sigma, observed=y)
+    ```
+
+    Args:
+        model:
+            the PYMC model to use
+        inference_data:
+            object returned by `pm.sample()`
+        data:
+            the new data to make predictions with
+        x_name:
+            the name of the X and y data. In the example above, the name of the X dataset is "X".
+        y_name:
+            the name of the X and y data. In the example above, the name of the y dataset is "y".
+    """
+    idata = posterior_predict_inference(
+        model=model,
+        idata_posterior=idata_posterior,
+        data=data,
+        x_name=x_name,
+        y_name=y_name,
+    )
     samples = idata['posterior_predictive'][get_target_name(idata)]\
         .stack(sample=['chain', 'draw']).\
         data
@@ -144,6 +223,41 @@ def predict(
         aggregation_func: Callable = np.median,
         x_name: str = 'X',
         y_name: str = 'y') -> float:
+    """
+    Makes predictions on out of sample data via `set_data()` function and returns the samples
+    in a np.ndarray with a length equal to the length of the new dataset `data` and the number of
+    columns equal to the number draws multiplied by the number of chains passed to `pm.sample()`.
+
+    When defining the model, you must explicitly specify the X and y data used by the model, so
+    that data can be swapped out with an out of sample dataset. For example, with the `X` and `y`
+    variables used in the following example:
+
+    ```
+    X = pm.MutableData("X", df_height.weight.values)
+    y = pm.MutableData("y", df_height.height.values)
+
+    a = pm.Normal('a', mu=178, sigma=20)
+    b = pm.Normal('b', mu=0, sigma=1)
+    sigma = pm.Uniform('sigma', 0, 50)
+    mu = a + np.exp(b) * (X - df_height.weight.mean())
+    height = pm.Normal('height', mu=mu, sigma=sigma, observed=y)
+    ```
+
+    Args:
+        model:
+            the PYMC model to use
+        inference_data:
+            object returned by `pm.sample()`
+        data:
+            the new data to make predictions with
+        aggregation_func:
+            the method that will aggregate all of the samples for each new observation/row in
+            `data`
+        x_name:
+            the name of the X and y data. In the example above, the name of the X dataset is "X".
+        y_name:
+            the name of the X and y data. In the example above, the name of the y dataset is "y".
+    """
     # predict a point estimate
     samples = posterior_predict(
         model=model,

@@ -72,6 +72,21 @@ def test__get_posterior_samples(
     assert abs(posterior_samples_b.mean() - 0.56) < 1
 
 
+def test__posterior_predict_inference(
+        height_model, height_idata_posterior,
+        height_model_posterior_samples,
+        height_model_chains,
+        df_height):
+    x_test = np.arange(64)
+    idata = ph.posterior_predict_inference(
+        model=height_model,
+        idata_posterior=height_idata_posterior,
+        data=x_test)
+    assert ph.get_dataset_names(idata) == ['posterior_predictive', 'observed_data', 'constant_data']  # noqa
+    assert ph.get_target_name(idata) == 'height'
+    idata['posterior_predictive']['height'].data.shape == (height_model_chains, height_model_posterior_samples, len(df_height))  # noqa
+
+
 def test__posterior_predict(
         height_model, height_idata_posterior, height_model_posterior_samples,
         height_model_chains):
