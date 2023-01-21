@@ -1,4 +1,7 @@
+aesara
+causalgraphicalmodels
 click
+daft
 helpsk
 flake8
 graphviz
