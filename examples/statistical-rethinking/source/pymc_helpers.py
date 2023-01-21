@@ -1,4 +1,3 @@
-from pydoc import doc
 from typing import Callable, Optional
 import pymc as pm
 import pandas as pd
