@@ -7,12 +7,39 @@ import matplotlib.pyplot as plt
 from helpsk.string import format_number
 
 
-def plotly_title(title: str, subtitle: Optional[str] = None) -> str:
+def px_title(title: str, subtitle: Optional[str] = None) -> str:
     """Formats title and subtitle for plotly graphs."""
     if subtitle:
         return f'{title}<br><sup>{subtitle}</sup>'
     else:
         return title
+
+
+def px_log_10_axis(fig, axis='x', min_value=-10, max_value=20, step=1):
+    """
+    Use this function to transform the ticks/labels of the x-axis of a plotly-express graph to
+    log10.
+
+    Example:
+
+    ```
+    fig = px.histogram(
+        np.log10(values),
+        title="Histogram of 'values' (Log10)"
+    )
+    px_log_10_x_axis(fig)
+    ```
+    """
+    values = list(range(min_value, max_value, step))
+    axis_value = dict(
+        tickvals=values,
+        ticktext=[10 ** x for x in values],
+    )
+    if axis == 'x':
+        fig.update_layout(xaxis=axis_value)
+    else:
+        fig.update_layout(yaxis=axis_value)
+    return fig
 
 
 def plot_hdi(
@@ -88,30 +115,3 @@ def plot_hdi(
     if not title:
         title = "HDI"
     plt.suptitle(title)
-
-
-def px_log_10_axis(fig, axis='x', min_value=-10, max_value=20, step=1):
-    """
-    Use this function to transform the ticks/labels of the x-axis of a plotly-express graph to
-    log10.
-
-    Example:
-
-    ```
-    fig = px.histogram(
-        np.log10(values),
-        title="Histogram of 'values' (Log10)"
-    )
-    px_log_10_x_axis(fig)
-    ```
-    """
-    values = list(range(min_value, max_value, step))
-    axis_value = dict(
-        tickvals=values,
-        ticktext=[10 ** x for x in values],
-    )
-    if axis == 'x':
-        fig.update_layout(xaxis=axis_value)
-    else:
-        fig.update_layout(yaxis=axis_value)
-    return fig
