@@ -1,11 +1,15 @@
+arviz
 auto-sklearn
 click
 helpsk
+faker
 flake8
 jupyter-contrib-nbextensions
 lightgbm
+matplotlib
 mlflow
 notebook
+networkx
 numpy
 pandas
 plotly

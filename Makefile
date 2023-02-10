@@ -3,17 +3,20 @@ conda_env_name = python_examples
 ####
 # DOCKER
 ####
-docker_compose:
+docker_build:
 	# docker build -t data-science-template .
 	docker compose -f docker-compose.yml up --build
 
-docker_run: notebook zsh
+docker_run: docker_build
+	# run the docker container
+	docker compose -f docker-compose.yml up
 
-notebook:
-	open 'http://127.0.0.1:8888/?token=d4484563805c48c9b55f75eb8b28b3797c6757ad4871776d'
+docker_down:
+	docker compose down --remove-orphans
 
-zsh:
-	docker exec -it python-examples-bash-1 /bin/zsh
+docker_zsh:
+	# run container and open up zsh command-line
+	docker exec -it python-helpers-bash-1 /bin/zsh
 
 ####
 # Conda
