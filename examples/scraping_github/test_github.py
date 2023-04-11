@@ -364,7 +364,6 @@ async def test__run_async__get_github_repo_info(github_token):
     assert all([x['stargazers_count'] > 0 for x in results])
 
 
-
 @pytest.mark.asyncio
 async def test__run_async__get_github_readme_url(github_token):
     arguments = [
