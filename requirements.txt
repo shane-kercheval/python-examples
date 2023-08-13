@@ -1,5 +1,4 @@
 arviz
-auto-sklearn
 click
 helpsk
 faker
