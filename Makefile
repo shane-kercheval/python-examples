@@ -14,6 +14,9 @@ docker_run: docker_build
 docker_down:
 	docker compose down --remove-orphans
 
+docker_rebuild:
+	docker compose -f docker-compose.yml build --no-cache
+
 docker_zsh:
 	# run container and open up zsh command-line
 	docker exec -it python-helpers-bash-1 /bin/zsh

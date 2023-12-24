@@ -1,14 +1,16 @@
-FROM python:3.10
+FROM python:3.11
+
+WORKDIR /code
+ENV PYTHONPATH "${PYTHONPATH}:/code"
+
+ENV PYDEVD_WARN_EVALUATION_TIMEOUT 1000
 
 RUN apt-get update -y && apt-get install zsh -y
 RUN PATH="$PATH:/usr/bin/zsh"
 
-RUN mkdir /code
-WORKDIR /code
-COPY requirements.txt .
-RUN python -m pip install --upgrade pip
-# RUN pip install Cython==0.29.36
-# RUN pip install scikit-learn --no-build-isolation
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apt-get install lsof
 
-ENV PYTHONPATH "${PYTHONPATH}:/code"
+RUN python -m pip install --upgrade pip
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN rm requirements.txt
