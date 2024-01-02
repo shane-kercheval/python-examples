@@ -1,3 +1,6 @@
+# cudf currently requires <=python3.10, and i struggled to get docker/cudf
+# setup correctly using python 3.10 base image but was able to get it to work
+# with `23.12-cuda12.0-py3.10` image
 FROM nvcr.io/nvidia/rapidsai/base:23.12-cuda12.0-py3.10
 USER root
 WORKDIR /code
