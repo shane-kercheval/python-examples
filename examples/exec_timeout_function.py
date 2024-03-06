@@ -5,7 +5,7 @@ import time
 
 
 def __timeout_handler(signum, frame):  # noqa
-    raise TimeoutError
+    raise TimeoutError()
 
 
 def exec_timeout(code: str, namespace: dict | None = None, timeout: int = 5) -> object:
